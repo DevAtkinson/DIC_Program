@@ -1,8 +1,8 @@
-function NR(subsize,numP,A,X)
+function NR2(subsize,numP,A,X)
 	% F=F_in(1:subsize,1:subsize);
 	F = sym('F_%d_%d', [subsize subsize]);
 	coef = sym('A_%d_%d_%d', [subsize subsize 16]);
-	% G = sym('G_%d_%d', [subsize subsize]);
+	G = sym('G_%d_%d', [subsize subsize]);
 	P = sym('P_%d', [numP,1])
 	subcord=sym('subcord_%d', [2,1]);
 	% syms d	W=A*X;
@@ -21,30 +21,17 @@ function NR(subsize,numP,A,X)
 	% y0=subsize/2+subcord(1);	
 	x0=subsize/2;													% x value for subset centre
 	y0=subsize/2;	
-	Fmean=mean(mean(F));
-	% save('NRF.mat','Fmean');
-	dF_temp=0;
+	% Fmean=mean(mean(F));
+	% dF_temp=0;
 	dx=X-x0;
 	dy=Y-y0;
 
-	% for i=1:subsize
-	% 	parfor j=1:subsize
-	% 		fprintf('%d %d \n', i, j);
-	% 		Ftemp(i,j)=(F(i,j)-Fmean)^2;
-	% 	end
-	% end
-	Ftemp=F-ones([subsize, subsize])*Fmean;
-	dF_temp=sum(sum(Ftemp.^2));
 
+	% Ftemp=F-ones([subsize, subsize])*Fmean;
+	% dF_temp=sum(sum(Ftemp.^2));
 
-	% for i=1:subsize
-	% 	for j=1:subsize
-	% 		fprintf('%d %d \n', i, j);
-	% 		dF_temp=dF_temp+(F(i,j)-Fmean)^2;
-	% 	end
-	% end
-	dF=sqrt(dF_temp);
-	% save('NRF.mat','dF');
+	% dF=sqrt(dF_temp);
+
 
 	
 	% dx=reshape(dx,[subsize*subsize,1]);
@@ -63,22 +50,22 @@ function NR(subsize,numP,A,X)
 		fprintf('interp %d \n', i);
 		for j=1:subsize
 			a=reshape(coef(i,j,:),[4,4]);
-			x_dec=xp(i,j)-floor(xp(i,j));
-			y_dec=yp(i,j)-floor(yp(i,j));
+			x_dec=mod(xp(i,j),1);
+			y_dec=mod(yp(i,j),1);
 			G(i,j)=[1, x_dec, x_dec^2, x_dec^3]*a*[1; y_dec; y_dec^2; y_dec^3];
 		end
 	end
 	toc1=toc
-	tic
-	fprintf('1\n');
-	Gmean=mean(mean(G));
-	fprintf('2\n');
-	Gtemp=G-ones([subsize, subsize])*Gmean;
-	fprintf('3\n');
-	dG_temp=sum(sum(Gtemp.^2));
-	fprintf('4\n');
-	dG=sqrt(dG_temp);
-	toc2=toc
+	% tic
+	% fprintf('1\n');
+	% Gmean=mean(mean(G));
+	% fprintf('2\n');
+	% Gtemp=G-ones([subsize, subsize])*Gmean;
+	% fprintf('3\n');
+	% dG_temp=sum(sum(Gtemp.^2));
+	% fprintf('4\n');
+	% dG=sqrt(dG_temp);
+	% toc2=toc
 	tic
 	% S=0;
 	% for i=1:subsize
@@ -87,12 +74,12 @@ function NR(subsize,numP,A,X)
 	% 		S=S+((F(i,j)-Fmean)/dF -(G(i,j)-Gmean)/dG)^2;
 	% 	end
 	% end
-	S=sum(sum((Ftemp./dF-Gtemp./dG).^2));
+	S=sum(sum((F-G).^2));
 	toc
 	% fid = fopen('myfile.txt', 'w');
 	% fwrite(fid, char(S), 'char');
 	% fclose(fid);
-	matlabFunction(S,'File','Suse','Optimize',false,'Vars',{F,coef,P});
+	% matlabFunction(S,'File','S','Optimize',false);
 	toc3=toc
 	% save('NRS.mat','S');
 	tic
@@ -110,7 +97,7 @@ function NR(subsize,numP,A,X)
 	% fid = fopen('myfile2.txt', 'w');
 	% fwrite(fid, char(J), 'char');
 	% fclose(fid);
-	% matlabFunction(J,'File','Jacobian5','Optimize',false);
+	matlabFunction(J,'File','Jacobian10','Optimize',false,'Vars',{F,coef,P});
 	madeFile=toc
 
 	tic
@@ -124,7 +111,7 @@ function NR(subsize,numP,A,X)
 	% fid = fopen('myfile3.txt', 'w');
 	% fwrite(fid, char(H), 'char');
 	% fclose(fid);
-	% matlabFunction(H,'File','Hessian5','Optimize',false);
+	matlabFunction(H,'File','Hessian10','Optimize',false,'Vars',{F,coef,P});
 	% save('NRsecond.mat','H');
 	toc
 

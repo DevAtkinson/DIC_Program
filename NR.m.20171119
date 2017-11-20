@@ -1,13 +1,12 @@
 function NR(subsize,numP,A,X)
-	% F=F_in(1:subsize,1:subsize);
-	F = sym('F_%d_%d', [subsize subsize]);
-	coef = sym('A_%d_%d_%d', [subsize subsize 16]);
-	% G = sym('G_%d_%d', [subsize subsize]);
-	P = sym('P_%d', [numP,1])
-	subcord=sym('subcord_%d', [2,1]);
+	F = sym('F%d%d', [subsize subsize]);
+	coef = sym('A%d%d%d', [subsize subsize 16]);
+	G = sym('G%d%d', [subsize subsize]);
+	P = sym('P%d', [numP,1])
+	subcord=sym('subcord%d', [2,1]);
 	% syms d	W=A*X;
 	% [r_g,c_g]=size(G);
-	% [Xmesh,Ymesh]=meshgrid(1:1:subsize,1:1:subsize);
+	[Xmesh,Ymesh]=meshgrid(1:1:subsize,1:1:subsize);
 	% Int = (Xmesh',Ymesh',G','cubic')
 
 
@@ -88,45 +87,36 @@ function NR(subsize,numP,A,X)
 	% 	end
 	% end
 	S=sum(sum((Ftemp./dF-Gtemp./dG).^2));
-	toc
 	% fid = fopen('myfile.txt', 'w');
 	% fwrite(fid, char(S), 'char');
 	% fclose(fid);
-	matlabFunction(S,'File','Suse','Optimize',false,'Vars',{F,coef,P});
+	matlabFunction(S,'File','SS');
 	toc3=toc
 	% save('NRS.mat','S');
-	tic
-	% S=simplify(S);
-	% toc
-	J=jacobian(S,P);
-	toc
-	% J(1,1)=diff(S,P(1))
-	% J(2,1)=diff(S,P(2))
-	% J(3,1)=diff(S,P(2))
-	% J(4,1)=diff(S,P(4))
-	% J(5,1)=diff(S,P(5))
-	% J(6,1)=diff(S,P(6))
+
+	J(1,1)=diff(S,P(1))
+	J(2,1)=diff(S,P(2))
+	J(3,1)=diff(S,P(2))
+	J(4,1)=diff(S,P(4))
+	J(5,1)=diff(S,P(5))
+	J(6,1)=diff(S,P(6))
 	% save('NRfirst.mat','J');
 	% fid = fopen('myfile2.txt', 'w');
 	% fwrite(fid, char(J), 'char');
 	% fclose(fid);
-	% matlabFunction(J,'File','Jacobian5','Optimize',false);
-	madeFile=toc
+	matlabFunction(J,'File','Jacobian2');
 
-	tic
-	H=hessian(S,P);
-	toc
-	% for i=1:numP
-	% 	for j=1:numP
-	% 		H(i,j)=diff(diff(S,P(i)),P(j))
-	% 	end
-	% end
+	for i=1:numP
+		for j=1:numP
+			H(i,j)=diff(diff(S,P(i)),P(j))
+		end
+	end
 	% fid = fopen('myfile3.txt', 'w');
 	% fwrite(fid, char(H), 'char');
 	% fclose(fid);
-	% matlabFunction(H,'File','Hessian5','Optimize',false);
+	matlabFunction(H,'File','Hessian2');
 	% save('NRsecond.mat','H');
-	toc
+
 
 
 	% x00=reshape(x0,[r*c,1]);

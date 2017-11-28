@@ -23,5 +23,5 @@ function testNR
 		0 0 1]
 	X=[dx;dy;1];
 
-	NR(subsize,numP,A,X)
+	NR3(subsize,numP,A,X)
 end

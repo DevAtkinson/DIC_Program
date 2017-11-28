@@ -4,7 +4,8 @@ function dicNR()
 	addpath(strcat(current_folder,'\readimxstuff'));
 	
 	% save_as='Richard_CTC.mat';
-	save_as='Richard_CTC_41_NR.mat';
+	% save_as='Richard_CTC_41_NR.mat';
+	save_as='Richard_CTC_41_NR_scaling_offset.mat';
 	% image_count=max(size(FileName));
 
 	inc=10;
@@ -37,6 +38,7 @@ function dicNR()
 		stepsize=Proc.stepsize;
 		subsize=Proc.subsize;
 		current_image=Proc.correlated_to;
+		% clear Proc.im
 		% Proc.stepsize=stepsize;
 		% Proc.subsize=subsize;
 		% save_as='Richard_CTC_2_subset_41.mat';
@@ -105,9 +107,10 @@ function dicNR()
 	% 	end
 	% end
 
-
+	
 	elements=sum(sum(valid_subsets))
 	size(process_order)
+	Pend=5+max(size(guess));
 
 	for k=(current_image+inc):inc:image_count
 		fprintf('image %d\n',k);
@@ -116,40 +119,50 @@ function dicNR()
 		image_folder = fullfile( PathName , FileName{k} );
 		I{3}=readimx(image_folder);
 		G_in=im2double(I{3}.Frames{1,1}.Components{1,1}.Planes{1,1});
-		if exist('coefficient_values.mat','file')
-			load('coefficient_values.mat');
-		else
-			tic
-			coef=getBicubicValues(G_in);
-			toc
-			save('coefficient_values.mat','coef');
-			fprintf('calculated coefficients\n');
-		end
+		% if exist('coefficient_values.mat','file')
+		% 	load('coefficient_values.mat');
+		% else
+		% 	tic
+		% 	coef=getBicubicValues(G_in);
+		% 	toc
+		% 	save('coefficient_values.mat','coef');
+		% 	fprintf('calculated coefficients\n');
+		% end
+		coef=getBicubicValues(G_in);
+		coefficient_time=toc
+		
 		
 		if (k==(1+inc))
 			
-
-			[PP(1,:),Corrr(1)]=NRtracking2('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset position',subpos{process_order(1,2),process_order(1,3)},'guess',guess,'coef',coef);
+			tic
+			[PP(1,:),Corrr(1)]=NRtracking3('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset position',subpos{process_order(1,2),process_order(1,3)},'guess',guess,'coef',coef);
+			toc
 			for i=2:elements
-				[PP(i,:),Corrr(i)]=NRtracking2('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset position',subpos{process_order(i,2),process_order(i,3)},'guess',PP(i-1,:),'coef',coef);
+				tic
+				[PP(i,:),Corrr(i)]=NRtracking3('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset position',subpos{process_order(i,2),process_order(i,3)},'guess',PP(i-1,:),'coef',coef);
+				toc
 			end
 			for j=1:elements
-				Proc.im{k-1}.D(j,6:11)=PP(j,:);
-				Proc.im{k-1}.D(j,12)=Corrr(j);
+				% Proc.im{k}.D(j,6:11)=PP(j,:);
+				% Proc.im{k}.D(j,12)=Corrr(j);
+				Proc.im{k}.D(j,6:Pend)=PP(j,:);
+				Proc.im{k}.D(j,Pend+1)=Corrr(j);
 			end
 			
 		else
 
 			parfor i=1:elements
-				[PP(i,:),Corrr(i)]=NRtracking2('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset position',subpos{process_order(i,2),process_order(i,3)},'guess',Proc.im{k-1-inc}.D(i,6:11),'coef',coef);
+				[PP(i,:),Corrr(i)]=NRtracking3('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset position',subpos{process_order(i,2),process_order(i,3)},'guess',Proc.im{k-inc}.D(i,6:11),'coef',coef);
 			end
 			for j=1:elements
-				Proc.im{k-1}.D(j,6:11)=PP(j,:);
-				Proc.im{k-1}.D(j,12)=Corrr(j);
+				% Proc.im{k}.D(j,6:11)=PP(j,:);
+				Proc.im{k}.D(j,6:Pend)=PP(j,:);
+				% Proc.im{k}.D(j,12)=Corrr(j);
+				Proc.im{k}.D(j,Pend+1)=Corrr(j);
 			end
 		end
 
-		toc
+		total_time=toc
 		Proc.correlated_to=k;
 		save(save_as,'Proc');
 	end

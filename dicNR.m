@@ -5,7 +5,7 @@ function dicNR()
 	
 	% save_as='Richard_CTC.mat';
 	% save_as='Richard_CTC_41_NR.mat';
-	save_as='Richard_CTC_41_NR_mean.mat';
+	save_as='Richard_CTC_41_NR_try.mat';
 	% image_count=max(size(FileName));
 
 	inc=10;
@@ -20,7 +20,7 @@ function dicNR()
 
 	if exist(save_as,'file')
 		load(save_as);
-		Proc.correlated_to=1;
+		% Proc.correlated_to=1;
 		subpos=Proc.subpos;
 		% guess_store=Proc.guess;
 		guess_store=[0 0];
@@ -93,25 +93,6 @@ function dicNR()
 	F_in=im2double(I{1}.Frames{1,1}.Components{1,1}.Planes{1,1});
     [r_F,c_F]=size(F_in);
  	image_count=max(size(FileName));
-
-	
-	% Proc.PathName=PathName;
-	% Proc.FileName=FileName;
-	% Proc.done=zeros([image_count,1]);
-	% for i=1:image_count
-	% 	fprintf('image %d\n',i);
-	% 	if Proc.done(i)==0
-	% 		image_folder = fullfile( PathName , FileName{i} );
-	% 		G=readimx(image_folder);
-	% 		tic
-	% 		coef{i}=getBicubicValues(G.Frames{1,1}.Components{1,1}.Planes{1,1});
-	% 		Proc.time(i)=toc;
-	% 		Proc.coef{i}=coef{i};
-	% 		Proc.done(i)=1;
-	% 		save('Richard_CTC_coefficients.mat','Proc');
-	% 	end
-	% end
-
 	
 	elements=sum(sum(valid_subsets))
 	size(process_order)
@@ -136,9 +117,7 @@ function dicNR()
 		coef=getBicubicValues(G_in);
 		coefficient_time=toc
 		
-		
 		if (k==(1+inc))
-			
 			tic
 			[PP(1,:),Corrr(1)]=NRtracking3('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset position',subpos{process_order(1,2),process_order(1,3)},'guess',guess,'coef',coef);
 			toc
@@ -153,24 +132,19 @@ function dicNR()
 				Proc.im{k}.D(j,6:Pend)=PP(j,:);
 				Proc.im{k}.D(j,Pend+1)=Corrr(j);
 			end
-			
 		else
-
 			parfor i=1:elements
 				[PP(i,:),Corrr(i)]=NRtracking3('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset position',subpos{process_order(i,2),process_order(i,3)},'guess',Proc.im{k-inc}.D(i,6:11),'coef',coef);
 			end
 			for j=1:elements
 				% Proc.im{k}.D(j,6:11)=PP(j,:);
-				Proc.im{k}.D(j,6:Pend)=PP(j,:);
 				% Proc.im{k}.D(j,12)=Corrr(j);
+				Proc.im{k}.D(j,6:Pend)=PP(j,:);
 				Proc.im{k}.D(j,Pend+1)=Corrr(j);
 			end
 		end
-
 		total_time=toc
 		Proc.correlated_to=k;
 		save(save_as,'Proc');
 	end
-
-
 end

@@ -101,7 +101,7 @@ function [per_uniq,done_subsets]=nextPerimeter(A,done_subsets,valid_subsets)
 			per(i,:)=[0 0 0 0];
 		end
 	end
-	per_uniq=unique(per,'rows','stable')
+	per_uniq=unique(per,'rows','stable');
 	check_zeros=0;
 	for i=1:max(size(per_uniq))
 		if per_uniq(i,:)==[0 0 0 0]

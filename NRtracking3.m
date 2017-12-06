@@ -48,13 +48,13 @@ function [P_final,Corr_out]=NRtracking3(varargin)
 		dy=Y-y0;
 		% [G,coef_out]=Gvalues(coef,P,dy,dx,X,Y);
 		% [J,H]=jacHes(F,G,coef_out,P,dx,dy,X,Y);
-		[G,J,H,Funcval]=getJac3(coef,P,dy,dx,X,Y,F);
-
+		[G,J,H,Funcval]=getJac4(coef,P,dy,dx,X,Y,F);
+		Funcval
 		dP=H\J;
 
-		P=P+dP';
+		P=P+dP'
 		% Funcval=S2(F,Ftemp,dF,coef,P,subsize,dy,dx,X,Y);
-		if ((norm(dP)<0.0004)&(Funcval<0.1))||(count>300) %abs(Funcval)<0.0004
+		if ((norm(dP)<0.0004)&(Funcval<0.1))||(count>300)||(Funcval<0.1) %abs(Funcval)<0.0004
 			dx=reshape(dx,[subsize*subsize,1]);
 			dy=reshape(dy,[subsize*subsize,1]);
 			% x00=reshape(x0,[r*c,1]);
@@ -73,11 +73,11 @@ function [P_final,Corr_out]=NRtracking3(varargin)
 			yp=reshape(ypp,[subsize,subsize]);
 
 			flag=1;
-			G_deformed=InterpFunc(xp,yp);
-			% meshcompare(F,G_deformed)
-			P_final=P;
+			% G_deformed=InterpFunc(xp,yp);
+			meshcompare(F,G)
+			P_final=P
 			% Corr_out=sum(sum((F-G_deformed).^2));
-			Corr_out=Funcval;
+			Corr_out=Funcval
 		end
 	end
 
@@ -224,16 +224,13 @@ function [G,J,H,Corr]=getJac2(coef,P,dy,dx,X,Y,F)
 			% check1=(-Jacky)'*(-Jacky)
 			% check2=(F(i,j)-Fmean - (G(i,j)-Gmean)).*(-Hess)
 			H=H+(-Jacky)'*(-Jacky)+(F(i,j)-Fmean - (G(i,j)-Gmean)).*(-Hess);
-
 		end
 	end
 	% J=J.*Jcoef;
 	% H=-Jcoef*H;
 	J=2*J;
 	H=2*H;
-
 	Corr=sum(sum((F-Fmean - (G-Gmean)).^2));
-	
 end
 
 function [G,J,H,Corr]=getJac3(coef,P,dy,dx,X,Y,F)
@@ -294,4 +291,83 @@ function [G,J,H,Corr]=getJac3(coef,P,dy,dx,X,Y,F)
 	J=2*J;
 	H=2/(G2*G2)*H;
 	Corr=sum(sum((F./F2-G./G2).^2));
+end
+
+function [G,J,H,Corr]=getJac4(coef,P,dy,dx,X,Y,F)
+	[r,c]=size(X);
+	Jcoef=-2/(sum(sum(F.^2)));
+	xp=zeros([r, c]);
+	yp=zeros([r, c]);
+	G=zeros([r, c]);
+	numP=max(size(P));
+	for i=1:r
+		for j=1:c
+			xp(i,j)=P(1)+P(3).*dy(i,j)+dx(i,j).*(P(2)+1.0)+X(i,j);
+			yp(i,j)=P(4)+P(5).*dx(i,j)+dy(i,j).*(P(6)+1.0)+Y(i,j);
+		end
+	end
+	for i=1:r
+		for j=1:c
+			a=reshape(coef(floor(yp(i,j)),floor(xp(i,j)),:),[4,4]);
+			x_dec=mod(xp(i,j),1);
+			y_dec=mod(yp(i,j),1);
+			if numP==6
+				G(i,j)=[1, x_dec, x_dec^2, x_dec^3]*a*[1; y_dec; y_dec^2; y_dec^3];
+			elseif numP==7
+				G(i,j)=[1, x_dec, x_dec^2, x_dec^3]*a*[1; y_dec; y_dec^2; y_dec^3]+P(7);
+			elseif numP==8
+				G(i,j)=[1, x_dec, x_dec^2, x_dec^3]*a*[1; y_dec; y_dec^2; y_dec^3].*P(8)+P(7);
+			end
+		end
+	end
+	Fmean=mean(mean(F));
+	Gmean=mean(mean(G));
+
+	JJ=zeros([numP,1]);
+	HH=zeros([numP,numP]);
+
+	for i=1:r
+		for j=1:c
+
+
+			Jacky=(JacobianStandard(coef(floor(yp(i,j)),floor(xp(i,j)),:),P',dx(i,j),dy(i,j),X(i,j),Y(i,j)));
+			Hess=(HessianStandard(coef(floor(yp(i,j)),floor(xp(i,j)),:),P',dx(i,j),dy(i,j),X(i,j),Y(i,j)));
+
+			JJ=JJ+Jacky';
+			HH=HH+Hess;
+		end
+	end
+	JJ=JJ./(r*c);
+	HH=HH./(r*c);
+	
+	
+	J=zeros([numP,1]);
+	H=zeros([numP,numP]);
+	for i=1:r
+		% fprintf('interp %d \n', i);
+		for j=1:c
+			% coef_out(i,j,:)=coef(floor(yp(i,j)),floor(xp(i,j)),:);
+
+			% G(i,j)=[1, y_dec, y_dec^2, y_dec^3]*a*[1; x_dec; x_dec^2; x_dec^3];
+			% Jacky=(JacobianValues(coef(floor(yp(i,j)),floor(xp(i,j)),:),P',dx(i,j),dy(i,j),X(i,j),Y(i,j)));
+			% % size(Jacky)
+			% % size(J)
+			% J=J+(F(i,j)-G(i,j)).*Jacky';
+			% H=H+Jacky'*Jacky;
+
+			Jacky=(JacobianStandard(coef(floor(yp(i,j)),floor(xp(i,j)),:),P',dx(i,j),dy(i,j),X(i,j),Y(i,j)));
+			Hess=(HessianStandard(coef(floor(yp(i,j)),floor(xp(i,j)),:),P',dx(i,j),dy(i,j),X(i,j),Y(i,j)));
+
+			J=J+(F(i,j)-Fmean - (G(i,j)-Gmean)).*(-Jacky'+JJ);
+			% check1=(-Jacky)'*(-Jacky)
+			% check2=(F(i,j)-Fmean - (G(i,j)-Gmean)).*(-Hess)
+			H=H+(-Jacky+JJ)'*(-Jacky+JJ)+(F(i,j)-Fmean - (G(i,j)-Gmean)).*(-Hess+HH);
+			% H=H+(-Jacky+JJ)'*(-Jacky+JJ);
+		end
+	end
+	% J=J.*Jcoef;
+	% H=-Jcoef*H;
+	J=2*J;
+	H=2*H;
+	Corr=sum(sum((F-Fmean - (G-Gmean)).^2));
 end

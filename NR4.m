@@ -1,5 +1,5 @@
 function NR4
-	numP=7;
+	numP=6;
 	% F=F_in(1:subsize,1:subsize);
 	% F = sym('F_%d_%d', [subsize subsize]);
 	coef = sym('A_%d', [1 16])
@@ -35,12 +35,13 @@ function NR4
 	% y_dec=mod(yp,1);
 	x_dec=xp-floor(xp)
 	y_dec=yp-floor(yp);
-	G=[1, x_dec, x_dec^2, x_dec^3]*a*[1; y_dec; y_dec^2; y_dec^3]+P(7);
+	G=[1, x_dec, x_dec^2, x_dec^3]*a*[1; y_dec; y_dec^2; y_dec^3];
 
 	J=jacobian(G,P);
+	H=hessian(G,P);
 
-	matlabFunction(J,'File','JacobianValuesOffset','Optimize',true,'Vars',{coef,P,dx,dy,X,Y});
-
+	matlabFunction(J,'File','JacobianStandard','Optimize',true,'Vars',{coef,P,dx,dy,X,Y});
+	matlabFunction(H,'File','HessianStandard','Optimize',true,'Vars',{coef,P,dx,dy,X,Y});
 
 
 

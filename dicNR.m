@@ -5,7 +5,7 @@ function dicNR()
 	
 	% save_as='Richard_CTC.mat';
 	% save_as='Richard_CTC_41_NR.mat';
-	save_as='Richard_CTC_41_NR_scaling_offset.mat';
+	save_as='Richard_CTC_41_NR_mean.mat';
 	% image_count=max(size(FileName));
 
 	inc=10;
@@ -20,7 +20,7 @@ function dicNR()
 
 	if exist(save_as,'file')
 		load(save_as);
-		% Proc.correlated_to=1;
+		Proc.correlated_to=1;
 		subpos=Proc.subpos;
 		% guess_store=Proc.guess;
 		guess_store=[0 0];
@@ -43,6 +43,11 @@ function dicNR()
 		% Proc.subsize=subsize;
 		% save_as='Richard_CTC_2_subset_41.mat';
 		symbolic_warp(B,X)
+
+		if current_image==1
+			[process_order,getIndex]=correlationOrderUpdated(subpos,starting_subset,valid_subsets);
+			Proc.process_order=process_order;
+		end
 	else 
 		[FileName,PathName] = uigetfile('*.im7','Select the images','MultiSelect','on');
 		Proc.FileName=FileName;
@@ -75,7 +80,7 @@ function dicNR()
 		guess=[guess_store(1),0,0,guess_store(2),0,0];
 		starting_subset=whichSubpos(subpos,stepsize,subx,suby);
 		Proc.starting_subset=starting_subset;
-		[process_order,getIndex]=correlationOrder(subpos,starting_subset)
+		[process_order,getIndex]=correlationOrderUpdated(subpos,starting_subset,valid_subsets)
 		Proc.process_order=process_order;
 		Proc.getIndex=getIndex;
 		Proc.correlated_to=1;

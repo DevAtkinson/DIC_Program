@@ -1,4 +1,6 @@
 function NR4
+	%function to create the functions that will give the symbolic jacobian and hessian of the G values
+
 	numP=6;
 	% F=F_in(1:subsize,1:subsize);
 	% F = sym('F_%d_%d', [subsize subsize]);

@@ -10,7 +10,8 @@ function dic_call
 	addpath(strcat(current_folder,'\readimxstuff'));
 	
 	% save_as='Richard_CTC.mat';
-	save_as='Richard_CTL_41_new_corr_order.mat';
+	save_as='FixNR_Sunday2_lucasKanade.mat';
+	% save_as='Richard_CTL_41_new_corr_order.mat';
 	% image_count=max(size(FileName));
 
 
@@ -30,7 +31,7 @@ function dic_call
 	% Proc.WarpVec=X;
 	if exist(save_as,'file')
 		load(save_as);
-		% Proc.correlated_to=1;
+		Proc.correlated_to=1;
 		subpos=Proc.subpos;
 		guess_store=Proc.guess;
 		guess=[guess_store(1),0,0,guess_store(2),0,0];
@@ -40,8 +41,8 @@ function dic_call
 		getIndex=Proc.getIndex;
 		FileName=Proc.FileName;
 		PathName=Proc.PathName;
-		inc=Proc.inc;
-		% Proc.inc=inc;
+		% inc=Proc.inc;
+		Proc.inc=inc;
 		X=Proc.WarpVec;
 		B=Proc.Warp;
 		stepsize=Proc.stepsize;
@@ -97,6 +98,8 @@ function dic_call
 	F_in=im2double(I{1}.Frames{1,1}.Components{1,1}.Planes{1,1});
     [r_F,c_F]=size(F_in);
  	image_count=max(size(FileName));
+ 	save_as='FixNR_Sunday2_lucasKanade_ZMN.mat';
+ 	% clear Proc.im
 
 	
 	
@@ -110,31 +113,32 @@ function dic_call
 	for k=(current_image+inc):inc:image_count
 		fprintf('image %d\n',k);
 		tic
-		Proc.im{k-1}.D=process_order;
+		Proc.im{k}.D=process_order;
 		if (k==(1+inc))
 			image_folder = fullfile( PathName , FileName{k} );
 			I{3}=readimx(image_folder);
 			G_in=im2double(I{3}.Frames{1,1}.Components{1,1}.Planes{1,1});
-			[PP(1,:),Corrr(1)]=DICtracking2('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset position',subpos{process_order(1,2),process_order(1,3)},'guess',guess,'correlation',1);
+			[PP(1,:),Corrr(1)]=DICtracking2('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset position',subpos{process_order(1,2),process_order(1,3)},'guess',guess,'correlation',3);
 			for i=2:elements
-				[PP(i,:),Corrr(i)]=DICtracking2('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset position',subpos{process_order(i,2),process_order(i,3)},'guess',PP(i-1,:),'correlation',1);
+				[PP(i,:),Corrr(i)]=DICtracking2('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset position',subpos{process_order(i,2),process_order(i,3)},'guess',PP(i-1,:),'correlation',3);
 			end
 			for j=1:elements
-				Proc.im{k-1}.D(j,6:11)=PP(j,:);
-				Proc.im{k-1}.D(j,12)=Corrr(j);
+				Proc.im{k}.D(j,6:11)=PP(j,:);
+				Proc.im{k}.D(j,12)=Corrr(j);
 			end
 			
 		else
 			image_folder = fullfile( PathName , FileName{k} );
 			I{3}=readimx(image_folder);
 			G_in=im2double(I{3}.Frames{1,1}.Components{1,1}.Planes{1,1});
-
+			% ppm = ParforProgMon('Correlation progress', elements,1,500,200);
 			parfor i=1:elements
-				[PP(i,:),Corrr(i)]=DICtracking2('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset position',subpos{process_order(i,2),process_order(i,3)},'guess',Proc.im{k-1-inc}.D(i,6:11),'correlation',1);
+				[PP(i,:),Corrr(i)]=DICtracking2('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset position',subpos{process_order(i,2),process_order(i,3)},'guess',Proc.im{k-inc}.D(i,6:11),'correlation',3);
+				% ppm.increment();
 			end
 			for j=1:elements
-				Proc.im{k-1}.D(j,6:11)=PP(j,:);
-				Proc.im{k-1}.D(j,12)=Corrr(j);
+				Proc.im{k}.D(j,6:11)=PP(j,:);
+				Proc.im{k}.D(j,12)=Corrr(j);
 			end
 			
 		end

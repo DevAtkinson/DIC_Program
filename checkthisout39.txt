@@ -1,0 +1,369 @@
+close all; clear; clc; dicNR_temp
+ 
+B =
+ 
+[ P2 + 1,     P3, P1]
+[     P5, P6 + 1, P4]
+[      0,      0,  1]
+ 
+
+elements =
+
+    21
+
+
+ans =
+
+    21     5
+
+
+ans =
+
+    21     2
+
+image 21
+
+bound =
+
+   4.9153e+03
+
+
+C =
+
+   1.0e+03 *
+
+    3.4142         0         0         0         0         0
+    1.1353    3.9684         0         0         0         0
+   -0.4950   -0.3878    3.0711         0         0         0
+   -0.2943   -0.3417    0.2732    2.7443         0         0
+   -0.0461   -0.0104   -0.0316   -0.0093    0.2895         0
+   -0.0263   -0.0321   -0.0138   -0.0415    0.0310    0.2512
+
+
+P =
+
+   -0.0004    0.0000    0.0000   -0.0002    0.0008    0.0021
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0000    0.0000    0.0000    0.0000    0.0008    0.0021
+
+
+Funcval =
+
+    0.0257
+
+
+bound =
+
+   4.2157e+03
+
+
+C =
+
+   1.0e+03 *
+
+    2.9539         0         0         0         0         0
+    0.2931    3.5454         0         0         0         0
+   -0.5773    1.1178    2.3542         0         0         0
+    0.4011   -0.5141    0.5269    2.1588         0         0
+   -0.0601    0.0408   -0.0984    0.0372    0.2275         0
+   -0.0057   -0.0422    0.0241   -0.1610    0.0970    0.0927
+
+
+P =
+
+   -0.0004    0.0000    0.0000   -0.0001    0.0009    0.0023
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-03 *
+
+    0.0007    0.0028    0.0018    0.0148    0.0929    0.2564
+
+
+Funcval =
+
+    0.0258
+
+
+bound =
+
+   4.2144e+03
+
+
+C =
+
+   1.0e+03 *
+
+    2.9286         0         0         0         0         0
+    0.3324    3.5455         0         0         0         0
+   -0.5899    1.1355    2.3513         0         0         0
+    0.4224   -0.5269    0.5562    2.1648         0         0
+   -0.0601    0.0437   -0.0998    0.0406    0.2273         0
+   -0.0054   -0.0417    0.0245   -0.1597    0.1011    0.0920
+
+
+P =
+
+   -0.0003    0.0001    0.0002    0.0004    0.0060    0.0126
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0001    0.0000    0.0002    0.0005    0.0051    0.0103
+
+
+Funcval =
+
+    0.0168
+
+
+bound =
+
+   4.9865e+03
+
+
+C =
+
+   1.0e+03 *
+
+    3.3948         0         0         0         0         0
+    1.1801    3.9707         0         0         0         0
+   -0.5107   -0.2530    3.1323         0         0         0
+    0.0904   -0.4635    0.3464    3.0089         0         0
+   -0.0416   -0.0184   -0.0067   -0.0113    0.2870         0
+   -0.0190   -0.0299   -0.0156   -0.0420    0.0378    0.2578
+
+
+P =
+
+   -0.0003    0.0001    0.0002    0.0004    0.0059    0.0125
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-04 *
+
+   -0.0056   -0.0131   -0.0043   -0.0135   -0.3575   -0.9619
+
+
+Funcval =
+
+    0.0168
+
+
+bound =
+
+   4.9847e+03
+
+
+C =
+
+   1.0e+03 *
+
+    3.3997         0         0         0         0         0
+    1.1906    3.9621         0         0         0         0
+   -0.5162   -0.2498    3.1319         0         0         0
+    0.0818   -0.4675    0.3487    3.0063         0         0
+   -0.0425   -0.0200   -0.0062   -0.0111    0.2865         0
+   -0.0195   -0.0306   -0.0152   -0.0423    0.0380    0.2577
+
+
+P =
+
+   -0.0003    0.0001    0.0002    0.0004    0.0059    0.0125
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-18 *
+
+    0.0025    0.0058    0.0018    0.0058    0.1556    0.4130
+
+
+Funcval =
+
+    0.0168
+
+
+bound =
+
+   4.9847e+03
+
+
+C =
+
+   1.0e+03 *
+
+    3.3997         0         0         0         0         0
+    1.1906    3.9621         0         0         0         0
+   -0.5162   -0.2498    3.1319         0         0         0
+    0.0818   -0.4675    0.3487    3.0063         0         0
+   -0.0425   -0.0200   -0.0062   -0.0111    0.2865         0
+   -0.0195   -0.0306   -0.0152   -0.0423    0.0380    0.2577
+
+
+P =
+
+   -0.0003    0.0001    0.0002    0.0004    0.0059    0.0125
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-18 *
+
+    0.0025    0.0058    0.0018    0.0058    0.1556    0.4130
+
+
+Funcval =
+
+    0.0168
+
+
+bound =
+
+   4.9847e+03
+
+
+C =
+
+   1.0e+03 *
+
+    3.3997         0         0         0         0         0
+    1.1906    3.9621         0         0         0         0
+   -0.5162   -0.2498    3.1319         0         0         0
+    0.0818   -0.4675    0.3487    3.0063         0         0
+   -0.0425   -0.0200   -0.0062   -0.0111    0.2865         0
+   -0.0195   -0.0306   -0.0152   -0.0423    0.0380    0.2577
+
+
+P =
+
+   -0.0003    0.0001    0.0002    0.0004    0.0059    0.0125
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-18 *
+
+    0.0025    0.0058    0.0018    0.0058    0.1556    0.4130
+
+
+Funcval =
+
+    0.0168
+
+
+bound =
+
+   4.9847e+03
+
+
+C =
+
+   1.0e+03 *
+
+    3.3997         0         0         0         0         0
+    1.1906    3.9621         0         0         0         0
+   -0.5162   -0.2498    3.1319         0         0         0
+    0.0818   -0.4675    0.3487    3.0063         0         0
+   -0.0425   -0.0200   -0.0062   -0.0111    0.2865         0
+   -0.0195   -0.0306   -0.0152   -0.0423    0.0380    0.2577
+
+
+P =
+
+   -0.0003    0.0001    0.0002    0.0004    0.0059    0.0125
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-18 *
+
+    0.0025    0.0058    0.0018    0.0058    0.1556    0.4130
+
+
+Funcval =
+
+    0.0168
+
+
+bound =
+
+   4.9847e+03
+
+
+C =
+
+   1.0e+03 *
+
+    3.3997         0         0         0         0         0
+    1.1906    3.9621         0         0         0         0
+   -0.5162   -0.2498    3.1319         0         0         0
+    0.0818   -0.4675    0.3487    3.0063         0         0
+   -0.0425   -0.0200   -0.0062   -0.0111    0.2865         0
+   -0.0195   -0.0306   -0.0152   -0.0423    0.0380    0.2577
+
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('JacobianStandard', 'D:\Work\Masters\DIC_Program\JacobianStandard.m', 17)" style="font-weight:bold">JacobianStandard</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\JacobianStandard.m',17,0)">line 17</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NRtracking3_temp>getJac6', 'D:\Work\Masters\DIC_Program\NRtracking3_temp.m', 712)" style="font-weight:bold">NRtracking3_temp>getJac6</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NRtracking3_temp.m',712,0)">line 712</a>)
+			Jacky=(JacobianStandard(coef(floor(yp(i,j)),floor(xp(i,j)),:),P',dx(i,j),dy(i,j),X,Y));
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NRtracking3_temp', 'D:\Work\Masters\DIC_Program\NRtracking3_temp.m', 115)" style="font-weight:bold">NRtracking3_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NRtracking3_temp.m',115,0)">line 115</a>)
+					[G,J,H,f1]=getJac6(coef,(P+(dP')*lambda1),dy,dx,x0,y0,F);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dicNR_temp', 'D:\Work\Masters\DIC_Program\dicNR_temp.m', 219)" style="font-weight:bold">dicNR_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\dicNR_temp.m',219,0)">line 219</a>)
+				[PP(i,:),Corrr(i),iter(i)]=NRtracking3_temp('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset
+                position',subpos{process_order(i,2),process_order(i,3)},'guess',Proc.imnr{k-inc}.D(i,6:Pend),'coef',coef)
+} 
+load('delete_me2.mat')
+c;ear
+{Undefined function or variable 'c'.
+} 
+clear
+clc
+diary('checkthisout40.txt')

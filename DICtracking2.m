@@ -174,37 +174,62 @@ function [P_final,Corr_out]=DICtracking2(varargin)
 		% check(converge)=sqrt(deltaP(1)^2+deltaP(2)^2);
 		% check(converge)=norm(deltaP);
 		% check(converge)=1;
-		if (check(converge)<0.0001)
+
+		criteria=0;
+		for l=1:r
+			for j=1:c
+				dx=XX(j)-x0;
+				dy=YY(l)-y0;
+				% might change
+				% xp1(l,j)=x0+dx*(1+P(2,converge))+P(3,converge)*dy+P(1,converge);
+				% yp1(l,j)=y0+dy*(1+P(6,converge))+P(5,converge)*dx+P(4,converge);
+				% xp1(l,j)=x0+P(1,converge)+dx;
+				% yp1(l,j)=y0+P(2,converge)+dy;
+				temp=WarpFunc(dx,dy,P);
+				xp1(l,j)=x0+temp(1);
+				yp1(l,j)=y0+temp(2);
+				if corrleation_type==3
+					criteria=criteria+((F(l,j)-Fmean)/dF -(G_defromed(l,j)-G_def_mean)/dG)^2;
+				elseif corrleation_type==2
+
+				elseif corrleation_type==1
+					criteria=criteria+((F(l,j)-Fmean) -(G_defromed(l,j)-G_def_mean))^2;
+				end
+						
+			end
+		end
+
+		if (check(converge)<0.0001)&&(criteria<0.001)
 			flag=0;
-		elseif (converge>200)
+		elseif (converge>2000)
 			flag=0;
 		end
 
 		% if the subsets are to be considered converged then determine the correlation coefficient #4.10
 		if (flag==0)
-			criteria=0;
-			for l=1:r
-				for j=1:c
-					dx=XX(j)-x0;
-					dy=YY(l)-y0;
-					% might change
-					% xp1(l,j)=x0+dx*(1+P(2,converge))+P(3,converge)*dy+P(1,converge);
-					% yp1(l,j)=y0+dy*(1+P(6,converge))+P(5,converge)*dx+P(4,converge);
-					% xp1(l,j)=x0+P(1,converge)+dx;
-					% yp1(l,j)=y0+P(2,converge)+dy;
-					temp=WarpFunc(dx,dy,P);
-					xp1(l,j)=x0+temp(1);
-					yp1(l,j)=y0+temp(2);
-					if corrleation_type==3
-						criteria=criteria+((F(l,j)-Fmean)/dF -(G_defromed(l,j)-G_def_mean)/dG)^2;
-					elseif corrleation_type==2
+			% criteria=0;
+			% for l=1:r
+			% 	for j=1:c
+			% 		dx=XX(j)-x0;
+			% 		dy=YY(l)-y0;
+			% 		% might change
+			% 		% xp1(l,j)=x0+dx*(1+P(2,converge))+P(3,converge)*dy+P(1,converge);
+			% 		% yp1(l,j)=y0+dy*(1+P(6,converge))+P(5,converge)*dx+P(4,converge);
+			% 		% xp1(l,j)=x0+P(1,converge)+dx;
+			% 		% yp1(l,j)=y0+P(2,converge)+dy;
+			% 		temp=WarpFunc(dx,dy,P);
+			% 		xp1(l,j)=x0+temp(1);
+			% 		yp1(l,j)=y0+temp(2);
+			% 		if corrleation_type==3
+			% 			criteria=criteria+((F(l,j)-Fmean)/dF -(G_defromed(l,j)-G_def_mean)/dG)^2;
+			% 		elseif corrleation_type==2
 
-					elseif corrleation_type==1
-						criteria=criteria+((F(l,j)-Fmean) -(G_defromed(l,j)-G_def_mean))^2;
-					end
+			% 		elseif corrleation_type==1
+			% 			criteria=criteria+((F(l,j)-Fmean) -(G_defromed(l,j)-G_def_mean))^2;
+			% 		end
 							
-				end
-			end
+			% 	end
+			% end
 			Corr_out=criteria;
 			% P_final=[P(1,converge+1),P(2,converge+1),P(3,converge+1),P(4,converge+1),P(5,converge+1),P(6,converge+1)];
 			P_final=P;

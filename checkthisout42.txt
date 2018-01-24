@@ -1,0 +1,5024 @@
+close all; clear; clc; dicNR_temp
+ 
+B =
+ 
+[ P2 + 1,     P3, P1]
+[     P5, P6 + 1, P4]
+[      0,      0,  1]
+ 
+
+elements =
+
+    21
+
+
+ans =
+
+    21     5
+
+
+ans =
+
+    21     2
+
+image 26
+
+coefficient_time =
+
+  165.9985
+
+
+bound =
+
+   1.9683e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.3259         0         0         0         0         0
+    0.4803    1.6089         0         0         0         0
+   -0.2270   -0.2025    1.2269         0         0         0
+   -0.1598   -0.1394    0.1258    1.0632         0         0
+   -0.0215   -0.0075   -0.0182   -0.0049    0.1156         0
+   -0.0120   -0.0141   -0.0070   -0.0215    0.0120    0.0963
+
+
+J =
+
+    1.1328
+  -24.5512
+   -0.5098
+   10.7236
+  -12.3370
+  -15.6679
+
+
+H =
+
+   1.0e+06 *
+
+    1.7580    0.6368   -0.3010   -0.2118   -0.0285   -0.0159
+    0.6368    2.8191   -0.4348   -0.3010   -0.0224   -0.0285
+   -0.3010   -0.4348    1.5977    0.2188   -0.0159   -0.0030
+   -0.2118   -0.3010    0.2188    1.1912   -0.0030   -0.0198
+   -0.0285   -0.0224   -0.0159   -0.0030    0.0142    0.0020
+   -0.0159   -0.0285   -0.0030   -0.0198    0.0020    0.0103
+
+
+dP =
+
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0008
+   -0.0016
+
+
+P =
+
+   -0.0003    0.0001    0.0000   -0.0001    0.0013    0.0026
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0000    0.0001    0.0000    0.0000    0.0013    0.0026
+
+
+Funcval =
+
+    0.0084
+
+
+bound =
+
+   1.6524e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.0839         0         0         0         0         0
+    0.0724    1.4665         0         0         0         0
+   -0.3085    0.4804    0.8130         0         0         0
+    0.2275   -0.2393    0.0139    0.7513         0         0
+   -0.0328    0.0046   -0.0513    0.0102    0.0842         0
+   -0.0015   -0.0199   -0.0178   -0.0848    0.0283    0.0515
+
+
+J =
+
+    0.5686
+   -6.1670
+  -16.2645
+   11.1073
+  -16.6207
+  -13.5297
+
+
+H =
+
+   1.0e+06 *
+
+    1.1749    0.0785   -0.3344    0.2466   -0.0355   -0.0016
+    0.0785    2.1559    0.6821   -0.3344    0.0044   -0.0293
+   -0.3344    0.6821    0.9869   -0.1738   -0.0293   -0.0236
+    0.2466   -0.3344   -0.1738    0.6736   -0.0016   -0.0595
+   -0.0355    0.0044   -0.0293   -0.0016    0.0109    0.0024
+   -0.0016   -0.0293   -0.0236   -0.0595    0.0024    0.0114
+
+
+dP =
+
+   -0.0000
+   -0.0000
+   -0.0002
+   -0.0003
+   -0.0016
+   -0.0026
+
+
+P =
+
+   -0.0003    0.0001    0.0002    0.0000    0.0024    0.0043
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0000    0.0000    0.0001    0.0002    0.0011    0.0018
+
+
+Funcval =
+
+    0.0071
+
+
+bound =
+
+   1.8716e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.6506         0         0         0         0         0
+   -0.0193    0.1138         0         0         0         0
+   -0.2297   -0.1046    1.2431         0         0         0
+   -0.2021   -0.0615    0.1444    0.9022         0         0
+    0.4282   -0.1692   -0.2034   -0.1256    0.9743         0
+   -0.0167    0.0179   -0.0041   -0.0481   -0.0365    0.0556
+
+
+J =
+
+    0.8389
+  -29.6827
+    0.6589
+   11.2790
+  -11.2273
+  -20.2817
+
+
+H =
+
+   1.0e+06 *
+
+    2.7246   -0.0319   -0.3791   -0.3335    0.7068   -0.0275
+   -0.0319    0.0133   -0.0075   -0.0031   -0.0275    0.0024
+   -0.3791   -0.0075    1.6089    0.2324   -0.3335   -0.0031
+   -0.3335   -0.0031    0.2324    0.8795   -0.2189   -0.0417
+    0.7068   -0.0275   -0.3335   -0.2189    1.2185   -0.0389
+   -0.0275    0.0024   -0.0031   -0.0417   -0.0389    0.0074
+
+
+dP =
+
+   -0.0001
+   -0.0020
+   -0.0000
+   -0.0004
+   -0.0003
+   -0.0058
+
+
+P =
+
+   -0.0003    0.0001    0.0002    0.0000    0.0024    0.0045
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-03 *
+
+    0.0019    0.0675    0.0014    0.0118    0.0094    0.1950
+
+
+Funcval =
+
+    0.0074
+
+
+bound =
+
+   1.7495e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.0565         0         0         0         0         0
+    0.6523    1.3877         0         0         0         0
+   -0.3126    0.0985    1.1267         0         0         0
+   -0.1304   -0.1767    0.1871    0.8674         0         0
+   -0.0287    0.0130   -0.0312    0.0034    0.1010         0
+   -0.0232   -0.0109   -0.0068   -0.0613    0.0179    0.0471
+
+
+J =
+
+    0.8198
+  -14.5258
+   -8.1278
+   11.0674
+  -14.1582
+  -19.1702
+
+
+H =
+
+   1.0e+06 *
+
+    1.1162    0.6891   -0.3302   -0.1377   -0.0303   -0.0245
+    0.6891    2.3512   -0.0672   -0.3302   -0.0007   -0.0303
+   -0.3302   -0.0672    1.3769    0.2342   -0.0249   -0.0014
+   -0.1377   -0.3302    0.2342    0.8356   -0.0014   -0.0495
+   -0.0303   -0.0007   -0.0249   -0.0014    0.0122    0.0023
+   -0.0245   -0.0303   -0.0014   -0.0495    0.0023    0.0070
+
+
+dP =
+
+   -0.0001
+   -0.0001
+    0.0000
+   -0.0005
+   -0.0001
+   -0.0072
+
+
+P =
+
+   -0.0003    0.0001    0.0002    0.0000    0.0024    0.0038
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-03 *
+
+   -0.0123   -0.0119    0.0028   -0.0458   -0.0099   -0.6665
+
+
+Funcval =
+
+    0.0069
+
+
+bound =
+
+   1.8080e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.0804         0         0         0         0         0
+    0.6177    1.4714         0         0         0         0
+   -0.2949   -0.0138    1.1754         0         0         0
+   -0.1762   -0.1426    0.1480    0.8671         0         0
+   -0.0279    0.0081   -0.0260   -0.0018    0.1056         0
+   -0.0291   -0.0083   -0.0088   -0.0602    0.0106    0.0491
+
+
+J =
+
+    0.8332
+  -20.0716
+   -4.4894
+   11.0668
+  -11.3155
+  -20.1992
+
+
+H =
+
+   1.0e+06 *
+
+    1.1672    0.6673   -0.3187   -0.1904   -0.0302   -0.0314
+    0.6673    2.5464   -0.2025   -0.3187   -0.0054   -0.0302
+   -0.3187   -0.2025    1.4687    0.2279   -0.0225   -0.0016
+   -0.1904   -0.3187    0.2279    0.8252   -0.0016   -0.0472
+   -0.0302   -0.0054   -0.0225   -0.0016    0.0127    0.0022
+   -0.0314   -0.0302   -0.0016   -0.0472    0.0022    0.0071
+
+
+dP =
+
+   -0.0002
+   -0.0001
+   -0.0000
+   -0.0005
+   -0.0002
+   -0.0077
+
+
+P =
+
+   -0.0003    0.0001    0.0002   -0.0000    0.0023    0.0033
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-03 *
+
+   -0.0178   -0.0076   -0.0000   -0.0387   -0.0177   -0.5708
+
+
+Funcval =
+
+    0.0070
+
+
+bound =
+
+   1.8727e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.0634         0         0         0         0         0
+    0.5896    1.5664         0         0         0         0
+   -0.2759   -0.1420    1.2240         0         0         0
+   -0.1812   -0.1191    0.1188    0.8556         0         0
+   -0.0261    0.0007   -0.0197   -0.0065    0.1118         0
+   -0.0420   -0.0019   -0.0123   -0.0546    0.0034    0.0424
+
+
+J =
+
+    0.7817
+  -27.5410
+    0.5563
+   11.0693
+  -13.8653
+  -17.9360
+
+
+H =
+
+   1.0e+06 *
+
+    1.1308    0.6270   -0.2934   -0.1927   -0.0278   -0.0447
+    0.6270    2.8014   -0.3850   -0.2934   -0.0142   -0.0278
+   -0.2934   -0.3850    1.5944    0.2123   -0.0170   -0.0032
+   -0.1927   -0.2934    0.2123    0.7931   -0.0032   -0.0403
+   -0.0278   -0.0142   -0.0170   -0.0032    0.0136    0.0021
+   -0.0447   -0.0278   -0.0032   -0.0403    0.0021    0.0067
+
+
+dP =
+
+   -0.0005
+   -0.0001
+   -0.0001
+   -0.0006
+   -0.0008
+   -0.0094
+
+
+P =
+
+   -0.0003    0.0001    0.0002   -0.0000    0.0024    0.0035
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-03 *
+
+    0.0095    0.0015    0.0011    0.0121    0.0167    0.1919
+
+
+Funcval =
+
+    0.0069
+
+
+bound =
+
+   1.8781e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.0788         0         0         0         0         0
+    0.5823    1.5711         0         0         0         0
+   -0.2722   -0.1437    1.2241         0         0         0
+   -0.1931   -0.1153    0.1167    0.8677         0         0
+   -0.0263   -0.0011   -0.0181   -0.0068    0.1126         0
+   -0.0434   -0.0020   -0.0122   -0.0524    0.0032    0.0457
+
+
+J =
+
+    0.7098
+  -25.3682
+   -0.8783
+   11.0431
+  -11.7102
+  -19.6304
+
+
+H =
+
+   1.0e+06 *
+
+    1.1637    0.6282   -0.2936   -0.2083   -0.0284   -0.0468
+    0.6282    2.8075   -0.3843   -0.2936   -0.0170   -0.0284
+   -0.2936   -0.3843    1.5933    0.2120   -0.0149   -0.0028
+   -0.2083   -0.2936    0.2120    0.8171   -0.0028   -0.0383
+   -0.0284   -0.0170   -0.0149   -0.0028    0.0137    0.0021
+   -0.0468   -0.0284   -0.0028   -0.0383    0.0021    0.0069
+
+
+dP =
+
+   -0.0004
+   -0.0001
+   -0.0000
+   -0.0005
+   -0.0007
+   -0.0090
+
+
+P =
+
+   -0.0003    0.0001    0.0002   -0.0000    0.0023    0.0033
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-03 *
+
+   -0.0094   -0.0014   -0.0010   -0.0112   -0.0140   -0.1881
+
+
+Funcval =
+
+    0.0070
+
+
+bound =
+
+   1.8735e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.0684         0         0         0         0         0
+    0.5861    1.5673         0         0         0         0
+   -0.2741   -0.1425    1.2241         0         0         0
+   -0.1872   -0.1168    0.1176    0.8580         0         0
+   -0.0261    0.0006   -0.0196   -0.0066    0.1117         0
+   -0.0409   -0.0025   -0.0120   -0.0554    0.0036    0.0436
+
+
+J =
+
+    0.7768
+  -27.5940
+    0.5934
+   11.0915
+  -13.6379
+  -18.1034
+
+
+H =
+
+   1.0e+06 *
+
+    1.1415    0.6262   -0.2928   -0.2000   -0.0279   -0.0437
+    0.6262    2.8000   -0.3840   -0.2928   -0.0144   -0.0279
+   -0.2928   -0.3840    1.5937    0.2119   -0.0169   -0.0032
+   -0.2000   -0.2928    0.2119    0.7987   -0.0032   -0.0410
+   -0.0279   -0.0144   -0.0169   -0.0032    0.0136    0.0021
+   -0.0437   -0.0279   -0.0032   -0.0410    0.0021    0.0068
+
+
+dP =
+
+   -0.0004
+   -0.0001
+   -0.0000
+   -0.0006
+   -0.0008
+   -0.0090
+
+
+P =
+
+   -0.0003    0.0001    0.0002   -0.0000    0.0024    0.0035
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-03 *
+
+    0.0094    0.0016    0.0010    0.0123    0.0171    0.1929
+
+
+Funcval =
+
+    0.0069
+
+
+bound =
+
+   1.8788e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.0804         0         0         0         0         0
+    0.5798    1.5722         0         0         0         0
+   -0.2705   -0.1450    1.2246         0         0         0
+   -0.1948   -0.1141    0.1158    0.8688         0         0
+   -0.0263   -0.0012   -0.0180   -0.0068    0.1126         0
+   -0.0431   -0.0022   -0.0120   -0.0525    0.0031    0.0461
+
+
+J =
+
+    0.6984
+  -25.2398
+   -0.9814
+   11.0455
+  -11.7328
+  -19.6170
+
+
+H =
+
+   1.0e+06 *
+
+    1.1673    0.6264   -0.2923   -0.2105   -0.0284   -0.0466
+    0.6264    2.8081   -0.3848   -0.2923   -0.0171   -0.0284
+   -0.2923   -0.3848    1.5939    0.2110   -0.0148   -0.0028
+   -0.2105   -0.2923    0.2110    0.8192   -0.0028   -0.0384
+   -0.0284   -0.0171   -0.0148   -0.0028    0.0137    0.0021
+   -0.0466   -0.0284   -0.0028   -0.0384    0.0021    0.0069
+
+
+dP =
+
+   -0.0004
+   -0.0001
+   -0.0000
+   -0.0005
+   -0.0007
+   -0.0088
+
+
+P =
+
+   -0.0003    0.0001    0.0002   -0.0000    0.0024    0.0035
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-04 *
+
+   -0.0085   -0.0013   -0.0009   -0.0101   -0.0131   -0.1699
+
+
+Funcval =
+
+    0.0069
+
+
+P_store =
+
+   -0.0004   -0.0000    0.0000   -0.0002   -0.0000   -0.0000
+   -0.0003    0.0001    0.0000   -0.0001    0.0013    0.0026
+   -0.0003    0.0001    0.0002    0.0000    0.0024    0.0043
+   -0.0003    0.0001    0.0002    0.0000    0.0024    0.0045
+   -0.0003    0.0001    0.0002    0.0000    0.0024    0.0038
+   -0.0003    0.0001    0.0002   -0.0000    0.0023    0.0033
+   -0.0003    0.0001    0.0002   -0.0000    0.0024    0.0035
+   -0.0003    0.0001    0.0002   -0.0000    0.0023    0.0033
+   -0.0003    0.0001    0.0002   -0.0000    0.0024    0.0035
+
+
+dP_store =
+
+   -0.0000   -0.0000   -0.0000   -0.0000   -0.0008   -0.0016
+   -0.0000   -0.0000   -0.0002   -0.0003   -0.0016   -0.0026
+   -0.0001   -0.0020   -0.0000   -0.0004   -0.0003   -0.0058
+   -0.0001   -0.0001    0.0000   -0.0005   -0.0001   -0.0072
+   -0.0002   -0.0001   -0.0000   -0.0005   -0.0002   -0.0077
+   -0.0005   -0.0001   -0.0001   -0.0006   -0.0008   -0.0094
+   -0.0004   -0.0001   -0.0000   -0.0005   -0.0007   -0.0090
+   -0.0004   -0.0001   -0.0000   -0.0006   -0.0008   -0.0090
+   -0.0004   -0.0001   -0.0000   -0.0005   -0.0007   -0.0088
+
+
+PP =
+
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+   -0.0003    0.0001    0.0002   -0.0000    0.0024    0.0035
+
+
+Corrr =
+
+         0         0         0    0.0069
+
+
+iter =
+
+     0     0     0     9
+
+
+total_time =
+
+  357.2407
+
+image 31
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bicubicCoefficients', 'D:\Work\Masters\DIC_Program\bicubicCoefficients.m', 12)" style="font-weight:bold">bicubicCoefficients</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\bicubicCoefficients.m',12,0)">line 12</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('getBicubicValues', 'D:\Work\Masters\DIC_Program\getBicubicValues.m', 7)" style="font-weight:bold">getBicubicValues</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\getBicubicValues.m',7,0)">line 7</a>)
+			coef(i,j,:)=reshape(bicubicCoefficients(F(i-1:i+2,j-1:j+2)),[1,1,16]);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dicNR_temp', 'D:\Work\Masters\DIC_Program\dicNR_temp.m', 155)" style="font-weight:bold">dicNR_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\dicNR_temp.m',155,0)">line 155</a>)
+				coef=getBicubicValues(G_in);
+} 
+close all; clear; clc; dicNR_temp
+ 
+B =
+ 
+[ P2 + 1,     P3, P1]
+[     P5, P6 + 1, P4]
+[      0,      0,  1]
+ 
+
+elements =
+
+    21
+
+
+ans =
+
+    21     5
+
+
+ans =
+
+    21     2
+
+image 26
+
+bound =
+
+   1.9683e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.3259         0         0         0         0         0
+    0.4803    1.6089         0         0         0         0
+   -0.2270   -0.2025    1.2269         0         0         0
+   -0.1598   -0.1394    0.1258    1.0632         0         0
+   -0.0215   -0.0075   -0.0182   -0.0049    0.1156         0
+   -0.0120   -0.0141   -0.0070   -0.0215    0.0120    0.0963
+
+
+J =
+
+    1.1328
+  -24.5512
+   -0.5098
+   10.7236
+  -12.3370
+  -15.6679
+
+
+H =
+
+   1.0e+06 *
+
+    1.7580    0.6368   -0.3010   -0.2118   -0.0285   -0.0159
+    0.6368    2.8191   -0.4348   -0.3010   -0.0224   -0.0285
+   -0.3010   -0.4348    1.5977    0.2188   -0.0159   -0.0030
+   -0.2118   -0.3010    0.2188    1.1912   -0.0030   -0.0198
+   -0.0285   -0.0224   -0.0159   -0.0030    0.0142    0.0020
+   -0.0159   -0.0285   -0.0030   -0.0198    0.0020    0.0103
+
+
+dP =
+
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0000
+   -0.0008
+   -0.0016
+
+
+P =
+
+   -0.0003    0.0001    0.0000   -0.0001    0.0013    0.0026
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0000    0.0001    0.0000    0.0000    0.0013    0.0026
+
+
+Funcval =
+
+    0.0084
+
+
+bound =
+
+   1.6524e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.0839         0         0         0         0         0
+    0.0724    1.4665         0         0         0         0
+   -0.3085    0.4804    0.8130         0         0         0
+    0.2275   -0.2393    0.0139    0.7513         0         0
+   -0.0328    0.0046   -0.0513    0.0102    0.0842         0
+   -0.0015   -0.0199   -0.0178   -0.0848    0.0283    0.0515
+
+
+J =
+
+    0.5686
+   -6.1670
+  -16.2645
+   11.1073
+  -16.6207
+  -13.5297
+
+
+H =
+
+   1.0e+06 *
+
+    1.1749    0.0785   -0.3344    0.2466   -0.0355   -0.0016
+    0.0785    2.1559    0.6821   -0.3344    0.0044   -0.0293
+   -0.3344    0.6821    0.9869   -0.1738   -0.0293   -0.0236
+    0.2466   -0.3344   -0.1738    0.6736   -0.0016   -0.0595
+   -0.0355    0.0044   -0.0293   -0.0016    0.0109    0.0024
+   -0.0016   -0.0293   -0.0236   -0.0595    0.0024    0.0114
+
+
+dP =
+
+   -0.0000
+   -0.0000
+   -0.0002
+   -0.0003
+   -0.0016
+   -0.0026
+
+
+P =
+
+   -0.0003    0.0001    0.0002    0.0000    0.0024    0.0043
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0000    0.0000    0.0001    0.0002    0.0011    0.0018
+
+
+Funcval =
+
+    0.0071
+
+
+bound =
+
+   1.8716e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.6506         0         0         0         0         0
+   -0.0193    0.1138         0         0         0         0
+   -0.2297   -0.1046    1.2431         0         0         0
+   -0.2021   -0.0615    0.1444    0.9022         0         0
+    0.4282   -0.1692   -0.2034   -0.1256    0.9743         0
+   -0.0167    0.0179   -0.0041   -0.0481   -0.0365    0.0556
+
+
+J =
+
+    0.8389
+  -29.6827
+    0.6589
+   11.2790
+  -11.2273
+  -20.2817
+
+
+H =
+
+   1.0e+06 *
+
+    2.7246   -0.0319   -0.3791   -0.3335    0.7068   -0.0275
+   -0.0319    0.0133   -0.0075   -0.0031   -0.0275    0.0024
+   -0.3791   -0.0075    1.6089    0.2324   -0.3335   -0.0031
+   -0.3335   -0.0031    0.2324    0.8795   -0.2189   -0.0417
+    0.7068   -0.0275   -0.3335   -0.2189    1.2185   -0.0389
+   -0.0275    0.0024   -0.0031   -0.0417   -0.0389    0.0074
+
+
+dP =
+
+   -0.0001
+   -0.0020
+   -0.0000
+   -0.0004
+   -0.0003
+   -0.0058
+
+
+P =
+
+   -0.0003    0.0001    0.0002    0.0000    0.0024    0.0045
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-03 *
+
+    0.0019    0.0675    0.0014    0.0118    0.0094    0.1950
+
+
+Funcval =
+
+    0.0074
+
+
+bound =
+
+   1.7495e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.0565         0         0         0         0         0
+    0.6523    1.3877         0         0         0         0
+   -0.3126    0.0985    1.1267         0         0         0
+   -0.1304   -0.1767    0.1871    0.8674         0         0
+   -0.0287    0.0130   -0.0312    0.0034    0.1010         0
+   -0.0232   -0.0109   -0.0068   -0.0613    0.0179    0.0471
+
+
+J =
+
+    0.8198
+  -14.5258
+   -8.1278
+   11.0674
+  -14.1582
+  -19.1702
+
+
+H =
+
+   1.0e+06 *
+
+    1.1162    0.6891   -0.3302   -0.1377   -0.0303   -0.0245
+    0.6891    2.3512   -0.0672   -0.3302   -0.0007   -0.0303
+   -0.3302   -0.0672    1.3769    0.2342   -0.0249   -0.0014
+   -0.1377   -0.3302    0.2342    0.8356   -0.0014   -0.0495
+   -0.0303   -0.0007   -0.0249   -0.0014    0.0122    0.0023
+   -0.0245   -0.0303   -0.0014   -0.0495    0.0023    0.0070
+
+
+dP =
+
+   -0.0001
+   -0.0001
+    0.0000
+   -0.0005
+   -0.0001
+   -0.0072
+
+
+P =
+
+   -0.0003    0.0001    0.0002    0.0000    0.0024    0.0038
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-03 *
+
+   -0.0123   -0.0119    0.0028   -0.0458   -0.0099   -0.6665
+
+
+Funcval =
+
+    0.0069
+
+
+bound =
+
+   1.8080e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.0804         0         0         0         0         0
+    0.6177    1.4714         0         0         0         0
+   -0.2949   -0.0138    1.1754         0         0         0
+   -0.1762   -0.1426    0.1480    0.8671         0         0
+   -0.0279    0.0081   -0.0260   -0.0018    0.1056         0
+   -0.0291   -0.0083   -0.0088   -0.0602    0.0106    0.0491
+
+
+J =
+
+    0.8332
+  -20.0716
+   -4.4894
+   11.0668
+  -11.3155
+  -20.1992
+
+
+H =
+
+   1.0e+06 *
+
+    1.1672    0.6673   -0.3187   -0.1904   -0.0302   -0.0314
+    0.6673    2.5464   -0.2025   -0.3187   -0.0054   -0.0302
+   -0.3187   -0.2025    1.4687    0.2279   -0.0225   -0.0016
+   -0.1904   -0.3187    0.2279    0.8252   -0.0016   -0.0472
+   -0.0302   -0.0054   -0.0225   -0.0016    0.0127    0.0022
+   -0.0314   -0.0302   -0.0016   -0.0472    0.0022    0.0071
+
+
+dP =
+
+   -0.0002
+   -0.0001
+   -0.0000
+   -0.0005
+   -0.0002
+   -0.0077
+
+
+P =
+
+   -0.0003    0.0001    0.0002   -0.0000    0.0023    0.0033
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-03 *
+
+   -0.0178   -0.0076   -0.0000   -0.0387   -0.0177   -0.5708
+
+
+Funcval =
+
+    0.0070
+
+
+bound =
+
+   1.8727e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.0634         0         0         0         0         0
+    0.5896    1.5664         0         0         0         0
+   -0.2759   -0.1420    1.2240         0         0         0
+   -0.1812   -0.1191    0.1188    0.8556         0         0
+   -0.0261    0.0007   -0.0197   -0.0065    0.1118         0
+   -0.0420   -0.0019   -0.0123   -0.0546    0.0034    0.0424
+
+
+J =
+
+    0.7817
+  -27.5410
+    0.5563
+   11.0693
+  -13.8653
+  -17.9360
+
+
+H =
+
+   1.0e+06 *
+
+    1.1308    0.6270   -0.2934   -0.1927   -0.0278   -0.0447
+    0.6270    2.8014   -0.3850   -0.2934   -0.0142   -0.0278
+   -0.2934   -0.3850    1.5944    0.2123   -0.0170   -0.0032
+   -0.1927   -0.2934    0.2123    0.7931   -0.0032   -0.0403
+   -0.0278   -0.0142   -0.0170   -0.0032    0.0136    0.0021
+   -0.0447   -0.0278   -0.0032   -0.0403    0.0021    0.0067
+
+
+dP =
+
+   -0.0005
+   -0.0001
+   -0.0001
+   -0.0006
+   -0.0008
+   -0.0094
+
+
+P =
+
+   -0.0003    0.0001    0.0002   -0.0000    0.0024    0.0035
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-03 *
+
+    0.0095    0.0015    0.0011    0.0121    0.0167    0.1919
+
+
+Funcval =
+
+    0.0069
+
+
+bound =
+
+   1.8781e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.0788         0         0         0         0         0
+    0.5823    1.5711         0         0         0         0
+   -0.2722   -0.1437    1.2241         0         0         0
+   -0.1931   -0.1153    0.1167    0.8677         0         0
+   -0.0263   -0.0011   -0.0181   -0.0068    0.1126         0
+   -0.0434   -0.0020   -0.0122   -0.0524    0.0032    0.0457
+
+
+J =
+
+    0.7098
+  -25.3682
+   -0.8783
+   11.0431
+  -11.7102
+  -19.6304
+
+
+H =
+
+   1.0e+06 *
+
+    1.1637    0.6282   -0.2936   -0.2083   -0.0284   -0.0468
+    0.6282    2.8075   -0.3843   -0.2936   -0.0170   -0.0284
+   -0.2936   -0.3843    1.5933    0.2120   -0.0149   -0.0028
+   -0.2083   -0.2936    0.2120    0.8171   -0.0028   -0.0383
+   -0.0284   -0.0170   -0.0149   -0.0028    0.0137    0.0021
+   -0.0468   -0.0284   -0.0028   -0.0383    0.0021    0.0069
+
+
+dP =
+
+   -0.0004
+   -0.0001
+   -0.0000
+   -0.0005
+   -0.0007
+   -0.0090
+
+
+P =
+
+   -0.0003    0.0001    0.0002   -0.0000    0.0023    0.0033
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-03 *
+
+   -0.0094   -0.0014   -0.0010   -0.0112   -0.0140   -0.1881
+
+
+Funcval =
+
+    0.0070
+
+
+bound =
+
+   1.8735e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.0684         0         0         0         0         0
+    0.5861    1.5673         0         0         0         0
+   -0.2741   -0.1425    1.2241         0         0         0
+   -0.1872   -0.1168    0.1176    0.8580         0         0
+   -0.0261    0.0006   -0.0196   -0.0066    0.1117         0
+   -0.0409   -0.0025   -0.0120   -0.0554    0.0036    0.0436
+
+
+J =
+
+    0.7768
+  -27.5940
+    0.5934
+   11.0915
+  -13.6379
+  -18.1034
+
+
+H =
+
+   1.0e+06 *
+
+    1.1415    0.6262   -0.2928   -0.2000   -0.0279   -0.0437
+    0.6262    2.8000   -0.3840   -0.2928   -0.0144   -0.0279
+   -0.2928   -0.3840    1.5937    0.2119   -0.0169   -0.0032
+   -0.2000   -0.2928    0.2119    0.7987   -0.0032   -0.0410
+   -0.0279   -0.0144   -0.0169   -0.0032    0.0136    0.0021
+   -0.0437   -0.0279   -0.0032   -0.0410    0.0021    0.0068
+
+
+dP =
+
+   -0.0004
+   -0.0001
+   -0.0000
+   -0.0006
+   -0.0008
+   -0.0090
+
+
+P =
+
+   -0.0003    0.0001    0.0002   -0.0000    0.0024    0.0035
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-03 *
+
+    0.0094    0.0016    0.0010    0.0123    0.0171    0.1929
+
+
+Funcval =
+
+    0.0069
+
+
+bound =
+
+   1.8788e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.0804         0         0         0         0         0
+    0.5798    1.5722         0         0         0         0
+   -0.2705   -0.1450    1.2246         0         0         0
+   -0.1948   -0.1141    0.1158    0.8688         0         0
+   -0.0263   -0.0012   -0.0180   -0.0068    0.1126         0
+   -0.0431   -0.0022   -0.0120   -0.0525    0.0031    0.0461
+
+
+J =
+
+    0.6984
+  -25.2398
+   -0.9814
+   11.0455
+  -11.7328
+  -19.6170
+
+
+H =
+
+   1.0e+06 *
+
+    1.1673    0.6264   -0.2923   -0.2105   -0.0284   -0.0466
+    0.6264    2.8081   -0.3848   -0.2923   -0.0171   -0.0284
+   -0.2923   -0.3848    1.5939    0.2110   -0.0148   -0.0028
+   -0.2105   -0.2923    0.2110    0.8192   -0.0028   -0.0384
+   -0.0284   -0.0171   -0.0148   -0.0028    0.0137    0.0021
+   -0.0466   -0.0284   -0.0028   -0.0384    0.0021    0.0069
+
+
+dP =
+
+   -0.0004
+   -0.0001
+   -0.0000
+   -0.0005
+   -0.0007
+   -0.0088
+
+
+P =
+
+   -0.0003    0.0001    0.0002   -0.0000    0.0024    0.0035
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-04 *
+
+   -0.0085   -0.0013   -0.0009   -0.0101   -0.0131   -0.1699
+
+
+Funcval =
+
+    0.0069
+
+
+bound =
+
+   1.8784e+03
+
+
+C =
+
+   1.0e+03 *
+
+    1.0815         0         0         0         0         0
+    0.5795    1.5716         0         0         0         0
+   -0.2705   -0.1442    1.2243         0         0         0
+   -0.1968   -0.1136    0.1156    0.8687         0         0
+   -0.0263   -0.0013   -0.0179   -0.0069    0.1126         0
+   -0.0429   -0.0022   -0.0120   -0.0528    0.0032    0.0462
+
+
+J =
+
+    0.6961
+  -25.2718
+   -0.9467
+   11.0576
+  -11.5714
+  -19.7127
+
+
+H =
+
+   1.0e+06 *
+
+    1.1697    0.6268   -0.2925   -0.2129   -0.0284   -0.0464
+    0.6268    2.8057   -0.3833   -0.2925   -0.0173   -0.0284
+   -0.2925   -0.3833    1.5929    0.2112   -0.0147   -0.0028
+   -0.2129   -0.2925    0.2112    0.8196   -0.0028   -0.0386
+   -0.0284   -0.0173   -0.0147   -0.0028    0.0137    0.0021
+   -0.0464   -0.0284   -0.0028   -0.0386    0.0021    0.0069
+
+
+dP =
+
+   -0.0004
+   -0.0001
+   -0.0000
+   -0.0005
+   -0.0007
+   -0.0088
+
+
+P =
+
+   -0.0003    0.0001    0.0002   -0.0000    0.0024    0.0035
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-15 *
+
+   -0.0443   -0.0067   -0.0049   -0.0535   -0.0669   -0.8915
+
+
+Funcval =
+
+    0.0069
+
+
+P_store =
+
+   -0.0004   -0.0000    0.0000   -0.0002   -0.0000   -0.0000
+   -0.0003    0.0001    0.0000   -0.0001    0.0013    0.0026
+   -0.0003    0.0001    0.0002    0.0000    0.0024    0.0043
+   -0.0003    0.0001    0.0002    0.0000    0.0024    0.0045
+   -0.0003    0.0001    0.0002    0.0000    0.0024    0.0038
+   -0.0003    0.0001    0.0002   -0.0000    0.0023    0.0033
+   -0.0003    0.0001    0.0002   -0.0000    0.0024    0.0035
+   -0.0003    0.0001    0.0002   -0.0000    0.0023    0.0033
+   -0.0003    0.0001    0.0002   -0.0000    0.0024    0.0035
+   -0.0003    0.0001    0.0002   -0.0000    0.0024    0.0035
+
+
+dP_store =
+
+   -0.0000   -0.0000   -0.0000   -0.0000   -0.0008   -0.0016
+   -0.0000   -0.0000   -0.0002   -0.0003   -0.0016   -0.0026
+   -0.0001   -0.0020   -0.0000   -0.0004   -0.0003   -0.0058
+   -0.0001   -0.0001    0.0000   -0.0005   -0.0001   -0.0072
+   -0.0002   -0.0001   -0.0000   -0.0005   -0.0002   -0.0077
+   -0.0005   -0.0001   -0.0001   -0.0006   -0.0008   -0.0094
+   -0.0004   -0.0001   -0.0000   -0.0005   -0.0007   -0.0090
+   -0.0004   -0.0001   -0.0000   -0.0006   -0.0008   -0.0090
+   -0.0004   -0.0001   -0.0000   -0.0005   -0.0007   -0.0088
+   -0.0004   -0.0001   -0.0000   -0.0005   -0.0007   -0.0088
+
+
+PP =
+
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+   -0.0003    0.0001    0.0002   -0.0000    0.0024    0.0035
+
+
+Corrr =
+
+         0         0         0    0.0069
+
+
+iter =
+
+     0     0     0    10
+
+
+total_time =
+
+  153.5049
+
+image 31
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bicubicCoefficients', 'D:\Work\Masters\DIC_Program\bicubicCoefficients.m', 15)" style="font-weight:bold">bicubicCoefficients</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\bicubicCoefficients.m',15,0)">line 15</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('getBicubicValues', 'D:\Work\Masters\DIC_Program\getBicubicValues.m', 7)" style="font-weight:bold">getBicubicValues</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\getBicubicValues.m',7,0)">line 7</a>)
+			coef(i,j,:)=reshape(bicubicCoefficients(F(i-1:i+2,j-1:j+2)),[1,1,16]);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dicNR_temp', 'D:\Work\Masters\DIC_Program\dicNR_temp.m', 155)" style="font-weight:bold">dicNR_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\dicNR_temp.m',155,0)">line 155</a>)
+				coef=getBicubicValues(G_in);
+} 
+close all; clear; clc; dicNR_temp
+ 
+B =
+ 
+[ P2 + 1,     P3, P1]
+[     P5, P6 + 1, P4]
+[      0,      0,  1]
+ 
+
+elements =
+
+    21
+
+
+ans =
+
+    21     5
+
+
+ans =
+
+    21     2
+
+image 26
+
+dP =
+
+   -0.0001
+    0.0000
+    0.0000
+    0.0011
+    0.0000
+    0.0000
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3812   -0.0018    0.0003   -0.1789   -0.0078   -0.0009
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-14 *
+
+    0.0206   -0.0007   -0.0004   -0.3644   -0.0006   -0.0018
+
+
+Funcval =
+
+    0.0058
+
+
+P_store =
+
+   1.0e-03 *
+
+   -0.3812   -0.0018    0.0003   -0.1789   -0.0078   -0.0009
+
+
+dP_store =
+
+   -0.0001    0.0000    0.0000    0.0011    0.0000    0.0000
+
+
+PP =
+
+   1.0e-03 *
+
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+   -0.3812   -0.0018    0.0003   -0.1789   -0.0078   -0.0009
+
+
+Corrr =
+
+         0         0         0    0.0058
+
+
+iter =
+
+     0     0     0     1
+
+
+total_time =
+
+   26.4717
+
+image 31
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dicNR_temp', 'D:\Work\Masters\DIC_Program\dicNR_temp.m', 150)" style="font-weight:bold">dicNR_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\dicNR_temp.m',150,0)">line 150</a>)
+} 
+NR5
+ 
+coef =
+ 
+[ A_1, A_2, A_3, A_4, A_5, A_6, A_7, A_8, A_9, A_10, A_11, A_12, A_13, A_14, A_15, A_16]
+ 
+ 
+P =
+ 
+ P_1
+ P_2
+ 
+{Index exceeds matrix dimensions.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/subsref', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\sym.m', 841)" style="font-weight:bold">sym/subsref</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\sym.m',841,0)">line 841</a>)
+            R_tilde = builtin('subsref',L_tilde,Idx);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NR5', 'D:\Work\Masters\DIC_Program\NR5.m', 34)" style="font-weight:bold">NR5</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NR5.m',34,0)">line 34</a>)
+	yp=P(4)+dy.*(1.0)+Y;
+} 
+NR5
+ 
+coef =
+ 
+[ A_1, A_2, A_3, A_4, A_5, A_6, A_7, A_8, A_9, A_10, A_11, A_12, A_13, A_14, A_15, A_16]
+ 
+ 
+P =
+ 
+ P_1
+ P_2
+ P_3
+ P_4
+ P_5
+ P_6
+ 
+ 
+x_dec =
+ 
+P_1 + X + dx - floor(P_1 + X + dx)
+ 
+[Warning: Function 'D' not verified to be a valid MATLAB function.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('symengine')" style="font-weight:bold">symengine</a>
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>mup2mat', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 398)" style="font-weight:bold">sym/matlabFunction>mup2mat</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',398,0)">line 398</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeBody', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 491)" style="font-weight:bold">sym/matlabFunction>writeBody</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',491,0)">line 491</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeMATLAB', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 442)" style="font-weight:bold">sym/matlabFunction>writeMATLAB</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',442,0)">line 442</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 179)" style="font-weight:bold">sym/matlabFunction</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',179,0)">line 179</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NR5', 'D:\Work\Masters\DIC_Program\NR5.m', 47)" style="font-weight:bold">NR5</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NR5.m',47,0)">line 47</a>)] 
+[Warning: Function 'D' not verified to be a valid MATLAB function.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('symengine')" style="font-weight:bold">symengine</a>
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>mup2mat', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 398)" style="font-weight:bold">sym/matlabFunction>mup2mat</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',398,0)">line 398</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeBody', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 491)" style="font-weight:bold">sym/matlabFunction>writeBody</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',491,0)">line 491</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeMATLAB', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 442)" style="font-weight:bold">sym/matlabFunction>writeMATLAB</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',442,0)">line 442</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 179)" style="font-weight:bold">sym/matlabFunction</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',179,0)">line 179</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NR5', 'D:\Work\Masters\DIC_Program\NR5.m', 47)" style="font-weight:bold">NR5</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NR5.m',47,0)">line 47</a>)] 
+[Warning: Function 'D' not verified to be a valid MATLAB function.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('symengine')" style="font-weight:bold">symengine</a>
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>mup2mat', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 398)" style="font-weight:bold">sym/matlabFunction>mup2mat</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',398,0)">line 398</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeBody', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 491)" style="font-weight:bold">sym/matlabFunction>writeBody</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',491,0)">line 491</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeMATLAB', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 442)" style="font-weight:bold">sym/matlabFunction>writeMATLAB</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',442,0)">line 442</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 179)" style="font-weight:bold">sym/matlabFunction</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',179,0)">line 179</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NR5', 'D:\Work\Masters\DIC_Program\NR5.m', 48)" style="font-weight:bold">NR5</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NR5.m',48,0)">line 48</a>)] 
+[Warning: Function 'D' not verified to be a valid MATLAB function.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('symengine')" style="font-weight:bold">symengine</a>
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>mup2mat', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 398)" style="font-weight:bold">sym/matlabFunction>mup2mat</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',398,0)">line 398</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeBody', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 491)" style="font-weight:bold">sym/matlabFunction>writeBody</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',491,0)">line 491</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeMATLAB', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 442)" style="font-weight:bold">sym/matlabFunction>writeMATLAB</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',442,0)">line 442</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 179)" style="font-weight:bold">sym/matlabFunction</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',179,0)">line 179</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NR5', 'D:\Work\Masters\DIC_Program\NR5.m', 48)" style="font-weight:bold">NR5</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NR5.m',48,0)">line 48</a>)] 
+[Warning: Function 'D' not verified to be a valid MATLAB function.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('symengine')" style="font-weight:bold">symengine</a>
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>mup2mat', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 398)" style="font-weight:bold">sym/matlabFunction>mup2mat</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',398,0)">line 398</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeBody', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 491)" style="font-weight:bold">sym/matlabFunction>writeBody</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',491,0)">line 491</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeMATLAB', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 442)" style="font-weight:bold">sym/matlabFunction>writeMATLAB</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',442,0)">line 442</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 179)" style="font-weight:bold">sym/matlabFunction</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',179,0)">line 179</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NR5', 'D:\Work\Masters\DIC_Program\NR5.m', 48)" style="font-weight:bold">NR5</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NR5.m',48,0)">line 48</a>)] 
+[Warning: Function 'D' not verified to be a valid MATLAB function.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('symengine')" style="font-weight:bold">symengine</a>
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>mup2mat', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 398)" style="font-weight:bold">sym/matlabFunction>mup2mat</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',398,0)">line 398</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeBody', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 491)" style="font-weight:bold">sym/matlabFunction>writeBody</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',491,0)">line 491</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeMATLAB', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 442)" style="font-weight:bold">sym/matlabFunction>writeMATLAB</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',442,0)">line 442</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 179)" style="font-weight:bold">sym/matlabFunction</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',179,0)">line 179</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NR5', 'D:\Work\Masters\DIC_Program\NR5.m', 48)" style="font-weight:bold">NR5</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NR5.m',48,0)">line 48</a>)] 
+close all; clear; clc; dicNR_temp
+ 
+B =
+ 
+[ P2 + 1,     P3, P1]
+[     P5, P6 + 1, P4]
+[      0,      0,  1]
+ 
+
+elements =
+
+    21
+
+
+ans =
+
+    21     5
+
+
+ans =
+
+    21     2
+
+image 26
+
+J =
+
+    6.4774
+         0
+         0
+   60.6774
+         0
+         0
+
+
+H =
+
+   1.0e+04 *
+
+    7.9564         0         0    1.1212         0         0
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+    1.1212         0         0    5.7420         0         0
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NRtracking3_temp', 'D:\Work\Masters\DIC_Program\NRtracking3_temp.m', 67)" style="font-weight:bold">NRtracking3_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NRtracking3_temp.m',67,0)">line 67</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dicNR_temp', 'D:\Work\Masters\DIC_Program\dicNR_temp.m', 219)" style="font-weight:bold">dicNR_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\dicNR_temp.m',219,0)">line 219</a>)] 
+[Warning: Matrix is singular to working precision.] 
+
+dP =
+
+   NaN
+   NaN
+   NaN
+   NaN
+   NaN
+   NaN
+
+{Subscript indices must either be real positive integers or logicals.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NRtracking3_temp>getJac6_2', 'D:\Work\Masters\DIC_Program\NRtracking3_temp.m', 910)" style="font-weight:bold">NRtracking3_temp>getJac6_2</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NRtracking3_temp.m',910,0)">line 910</a>)
+			a=reshape(coef(floor(yp(i,j)),floor(xp(i,j)),:),[4,4]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NRtracking3_temp', 'D:\Work\Masters\DIC_Program\NRtracking3_temp.m', 82)" style="font-weight:bold">NRtracking3_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NRtracking3_temp.m',82,0)">line 82</a>)
+	   			[G,J,H,f1]=getJac6_2(coef,(P+(dP')*lambda1),dy,dx,x0,y0,F);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dicNR_temp', 'D:\Work\Masters\DIC_Program\dicNR_temp.m', 219)" style="font-weight:bold">dicNR_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\dicNR_temp.m',219,0)">line 219</a>)
+				[PP(i,:),Corrr(i),iter(i)]=NRtracking3_temp('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset
+                position',subpos{process_order(i,2),process_order(i,3)},'guess',Proc.imnr{k-inc}.D(i,6:Pend),'coef',coef)
+} 
+close all; clear; clc; dicNR_temp
+ 
+B =
+ 
+[ P2 + 1,     P3, P1]
+[     P5, P6 + 1, P4]
+[      0,      0,  1]
+ 
+
+elements =
+
+    21
+
+
+ans =
+
+    21     5
+
+
+ans =
+
+    21     2
+
+image 26
+{Index exceeds matrix dimensions.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('JacobianStandard_p2', 'D:\Work\Masters\DIC_Program\JacobianStandard_p2.m', 24)" style="font-weight:bold">JacobianStandard_p2</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\JacobianStandard_p2.m',24,0)">line 24</a>)
+P_4 = in2(4,:);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NRtracking3_temp>getJac6_2', 'D:\Work\Masters\DIC_Program\NRtracking3_temp.m', 942)" style="font-weight:bold">NRtracking3_temp>getJac6_2</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NRtracking3_temp.m',942,0)">line 942</a>)
+			Jacky=(JacobianStandard_p2(coef(floor(yp(i,j)),floor(xp(i,j)),:),P',dx(i,j),dy(i,j),X,Y));
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NRtracking3_temp', 'D:\Work\Masters\DIC_Program\NRtracking3_temp.m', 60)" style="font-weight:bold">NRtracking3_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NRtracking3_temp.m',60,0)">line 60</a>)
+		[G,J,H,Funcval]=getJac6_2(coef,P,dy,dx,x0,y0,F);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dicNR_temp', 'D:\Work\Masters\DIC_Program\dicNR_temp.m', 219)" style="font-weight:bold">dicNR_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\dicNR_temp.m',219,0)">line 219</a>)
+				[PP(i,:),Corrr(i),iter(i)]=NRtracking3_temp('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset
+                position',subpos{process_order(i,2),process_order(i,3)},'guess',Proc.imnr{k-inc}.D(i,6:Pend),'coef',coef)
+} 
+NR5
+ 
+coef =
+ 
+[ A_1, A_2, A_3, A_4, A_5, A_6, A_7, A_8, A_9, A_10, A_11, A_12, A_13, A_14, A_15, A_16]
+ 
+ 
+P =
+ 
+ P_1
+ P_2
+ 
+ 
+x_dec =
+ 
+P_1 + X + dx - floor(P_1 + X + dx)
+ 
+[Warning: Function 'D' not verified to be a valid MATLAB function.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('symengine')" style="font-weight:bold">symengine</a>
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>mup2mat', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 398)" style="font-weight:bold">sym/matlabFunction>mup2mat</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',398,0)">line 398</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeBody', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 491)" style="font-weight:bold">sym/matlabFunction>writeBody</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',491,0)">line 491</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeMATLAB', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 442)" style="font-weight:bold">sym/matlabFunction>writeMATLAB</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',442,0)">line 442</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 179)" style="font-weight:bold">sym/matlabFunction</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',179,0)">line 179</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NR5', 'D:\Work\Masters\DIC_Program\NR5.m', 47)" style="font-weight:bold">NR5</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NR5.m',47,0)">line 47</a>)] 
+[Warning: Function 'D' not verified to be a valid MATLAB function.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('symengine')" style="font-weight:bold">symengine</a>
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>mup2mat', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 398)" style="font-weight:bold">sym/matlabFunction>mup2mat</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',398,0)">line 398</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeBody', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 491)" style="font-weight:bold">sym/matlabFunction>writeBody</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',491,0)">line 491</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeMATLAB', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 442)" style="font-weight:bold">sym/matlabFunction>writeMATLAB</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',442,0)">line 442</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 179)" style="font-weight:bold">sym/matlabFunction</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',179,0)">line 179</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NR5', 'D:\Work\Masters\DIC_Program\NR5.m', 47)" style="font-weight:bold">NR5</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NR5.m',47,0)">line 47</a>)] 
+[Warning: Function 'D' not verified to be a valid MATLAB function.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('symengine')" style="font-weight:bold">symengine</a>
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>mup2mat', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 398)" style="font-weight:bold">sym/matlabFunction>mup2mat</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',398,0)">line 398</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeBody', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 491)" style="font-weight:bold">sym/matlabFunction>writeBody</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',491,0)">line 491</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeMATLAB', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 442)" style="font-weight:bold">sym/matlabFunction>writeMATLAB</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',442,0)">line 442</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 179)" style="font-weight:bold">sym/matlabFunction</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',179,0)">line 179</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NR5', 'D:\Work\Masters\DIC_Program\NR5.m', 48)" style="font-weight:bold">NR5</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NR5.m',48,0)">line 48</a>)] 
+[Warning: Function 'D' not verified to be a valid MATLAB function.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('symengine')" style="font-weight:bold">symengine</a>
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>mup2mat', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 398)" style="font-weight:bold">sym/matlabFunction>mup2mat</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',398,0)">line 398</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeBody', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 491)" style="font-weight:bold">sym/matlabFunction>writeBody</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',491,0)">line 491</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeMATLAB', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 442)" style="font-weight:bold">sym/matlabFunction>writeMATLAB</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',442,0)">line 442</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 179)" style="font-weight:bold">sym/matlabFunction</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',179,0)">line 179</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NR5', 'D:\Work\Masters\DIC_Program\NR5.m', 48)" style="font-weight:bold">NR5</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NR5.m',48,0)">line 48</a>)] 
+[Warning: Function 'D' not verified to be a valid MATLAB function.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('symengine')" style="font-weight:bold">symengine</a>
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>mup2mat', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 398)" style="font-weight:bold">sym/matlabFunction>mup2mat</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',398,0)">line 398</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeBody', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 491)" style="font-weight:bold">sym/matlabFunction>writeBody</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',491,0)">line 491</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeMATLAB', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 442)" style="font-weight:bold">sym/matlabFunction>writeMATLAB</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',442,0)">line 442</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 179)" style="font-weight:bold">sym/matlabFunction</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',179,0)">line 179</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NR5', 'D:\Work\Masters\DIC_Program\NR5.m', 48)" style="font-weight:bold">NR5</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NR5.m',48,0)">line 48</a>)] 
+[Warning: Function 'D' not verified to be a valid MATLAB function.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('symengine')" style="font-weight:bold">symengine</a>
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>mup2mat', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 398)" style="font-weight:bold">sym/matlabFunction>mup2mat</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',398,0)">line 398</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeBody', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 491)" style="font-weight:bold">sym/matlabFunction>writeBody</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',491,0)">line 491</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction>writeMATLAB', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 442)" style="font-weight:bold">sym/matlabFunction>writeMATLAB</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',442,0)">line 442</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/matlabFunction', 'C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m', 179)" style="font-weight:bold">sym/matlabFunction</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\symbolic\symbolic\@sym\matlabFunction.m',179,0)">line 179</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NR5', 'D:\Work\Masters\DIC_Program\NR5.m', 48)" style="font-weight:bold">NR5</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NR5.m',48,0)">line 48</a>)] 
+close all; clear; clc; dicNR_temp
+ 
+B =
+ 
+[ P2 + 1,     P3, P1]
+[     P5, P6 + 1, P4]
+[      0,      0,  1]
+ 
+
+elements =
+
+    21
+
+
+ans =
+
+    21     5
+
+
+ans =
+
+    21     2
+
+image 26
+
+J =
+
+   NaN
+   NaN
+
+
+H =
+
+   NaN   NaN
+   NaN   NaN
+
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NRtracking3_temp', 'D:\Work\Masters\DIC_Program\NRtracking3_temp.m', 71)" style="font-weight:bold">NRtracking3_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NRtracking3_temp.m',71,0)">line 71</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dicNR_temp', 'D:\Work\Masters\DIC_Program\dicNR_temp.m', 219)" style="font-weight:bold">dicNR_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\dicNR_temp.m',219,0)">line 219</a>)] 
+[Warning: Matrix is singular, close to singular or badly scaled. Results may be inaccurate. RCOND = NaN.] 
+
+dP =
+
+   NaN
+   NaN
+
+{Subscript indices must either be real positive integers or logicals.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NRtracking3_temp>getJac6_2', 'D:\Work\Masters\DIC_Program\NRtracking3_temp.m', 914)" style="font-weight:bold">NRtracking3_temp>getJac6_2</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NRtracking3_temp.m',914,0)">line 914</a>)
+			a=reshape(coef(floor(yp(i,j)),floor(xp(i,j)),:),[4,4]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NRtracking3_temp', 'D:\Work\Masters\DIC_Program\NRtracking3_temp.m', 86)" style="font-weight:bold">NRtracking3_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NRtracking3_temp.m',86,0)">line 86</a>)
+	   			[G,J,H,f1]=getJac6_2(coef,(P+(dP')*lambda1),dy,dx,x0,y0,F);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dicNR_temp', 'D:\Work\Masters\DIC_Program\dicNR_temp.m', 219)" style="font-weight:bold">dicNR_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\dicNR_temp.m',219,0)">line 219</a>)
+				[PP(i,:),Corrr(i),iter(i)]=NRtracking3_temp('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset
+                position',subpos{process_order(i,2),process_order(i,3)},'guess',Proc.imnr{k-inc}.D(i,6:Pend),'coef',coef)
+} 
+close all; clear; clc; dicNR_temp
+ 
+B =
+ 
+[ P2 + 1,     P3, P1]
+[     P5, P6 + 1, P4]
+[      0,      0,  1]
+ 
+
+elements =
+
+    21
+
+
+ans =
+
+    21     5
+
+
+ans =
+
+    21     2
+
+image 26
+{Error: <a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NRtracking3_temp.m',64,9)">File: NRtracking3_temp.m Line: 64 Column: 9
+</a>Illegal use of reserved keyword "else".
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dicNR_temp', 'D:\Work\Masters\DIC_Program\dicNR_temp.m', 219)" style="font-weight:bold">dicNR_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\dicNR_temp.m',219,0)">line 219</a>)
+				[PP(i,:),Corrr(i),iter(i)]=NRtracking3_temp('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset
+                position',subpos{process_order(i,2),process_order(i,3)},'guess',Proc.imnr{k-inc}.D(i,6:Pend),'coef',coef)
+} 
+close all; clear; clc; dicNR_temp
+ 
+B =
+ 
+[ P2 + 1,     P3, P1]
+[     P5, P6 + 1, P4]
+[      0,      0,  1]
+ 
+
+elements =
+
+    21
+
+
+ans =
+
+    21     5
+
+
+ans =
+
+    21     2
+
+image 26
+
+dP =
+
+   -0.0001
+    0.0000
+    0.0000
+    0.0011
+    0.0000
+    0.0000
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3812   -0.0018    0.0003   -0.1789   -0.0078   -0.0009
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-14 *
+
+    0.0210   -0.0007   -0.0004   -0.3624   -0.0005   -0.0018
+
+
+Funcval =
+
+    0.0329
+
+
+P =
+
+    0.9289   -0.0000    0.0000   -0.0002   -0.0000   -0.0000
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.9293         0         0         0         0         0
+
+
+Funcval =
+
+    0.0069
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0561
+   -0.0030
+   -0.0001
+   -0.6147
+    0.0028
+   -0.0088
+
+
+P =
+
+    0.9295   -0.0000   -0.0000   -0.0063    0.0000   -0.0001
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0006   -0.0000   -0.0000   -0.0061    0.0000   -0.0001
+
+
+Funcval =
+
+    0.0067
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0543
+   -0.0027
+   -0.0001
+   -0.5903
+    0.0024
+   -0.0078
+
+
+P =
+
+    0.9300   -0.0001   -0.0000   -0.0122    0.0000   -0.0002
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005   -0.0000   -0.0000   -0.0059    0.0000   -0.0001
+
+
+Funcval =
+
+    0.0066
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0526
+   -0.0025
+   -0.0001
+   -0.5680
+    0.0020
+   -0.0069
+
+
+P =
+
+    0.9305   -0.0001   -0.0000   -0.0179    0.0001   -0.0002
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005   -0.0000   -0.0000   -0.0057    0.0000   -0.0001
+
+
+Funcval =
+
+    0.0064
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0510
+   -0.0023
+   -0.0001
+   -0.5474
+    0.0017
+   -0.0061
+
+
+P =
+
+    0.9311   -0.0001   -0.0000   -0.0234    0.0001   -0.0003
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005   -0.0000   -0.0000   -0.0055    0.0000   -0.0001
+
+
+Funcval =
+
+    0.0063
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0496
+   -0.0021
+   -0.0001
+   -0.5283
+    0.0014
+   -0.0055
+
+
+P =
+
+    0.9315   -0.0001   -0.0000   -0.0287    0.0001   -0.0004
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005   -0.0000   -0.0000   -0.0053    0.0000   -0.0001
+
+
+Funcval =
+
+    0.0061
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0482
+   -0.0019
+   -0.0001
+   -0.5107
+    0.0011
+   -0.0049
+
+
+P =
+
+    0.9320   -0.0001   -0.0000   -0.0338    0.0001   -0.0004
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005   -0.0000   -0.0000   -0.0051    0.0000   -0.0000
+
+
+Funcval =
+
+    0.0060
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0469
+   -0.0017
+   -0.0001
+   -0.4941
+    0.0009
+   -0.0044
+
+
+P =
+
+    0.9325   -0.0002   -0.0000   -0.0387    0.0001   -0.0004
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005   -0.0000   -0.0000   -0.0049    0.0000   -0.0000
+
+
+Funcval =
+
+    0.0058
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0457
+   -0.0016
+   -0.0001
+   -0.4787
+    0.0008
+   -0.0039
+
+
+P =
+
+    0.9330   -0.0002   -0.0000   -0.0435    0.0001   -0.0005
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005   -0.0000   -0.0000   -0.0048    0.0000   -0.0000
+
+
+Funcval =
+
+    0.0057
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0446
+   -0.0015
+   -0.0001
+   -0.4642
+    0.0006
+   -0.0035
+
+
+P =
+
+    0.9334   -0.0002   -0.0000   -0.0481    0.0001   -0.0005
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004   -0.0000   -0.0000   -0.0046    0.0000   -0.0000
+
+
+Funcval =
+
+    0.0056
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0436
+   -0.0014
+   -0.0001
+   -0.4506
+    0.0005
+   -0.0031
+
+
+P =
+
+    0.9338   -0.0002   -0.0000   -0.0526    0.0001   -0.0005
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004   -0.0000   -0.0000   -0.0045    0.0000   -0.0000
+
+
+Funcval =
+
+    0.0054
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0426
+   -0.0012
+   -0.0001
+   -0.4377
+    0.0003
+   -0.0028
+
+
+P =
+
+    0.9343   -0.0002   -0.0000   -0.0570    0.0001   -0.0006
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004   -0.0000   -0.0000   -0.0044    0.0000   -0.0000
+
+
+Funcval =
+
+    0.0053
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0416
+   -0.0012
+   -0.0001
+   -0.4255
+    0.0002
+   -0.0025
+
+
+P =
+
+    0.9347   -0.0002   -0.0000   -0.0613    0.0001   -0.0006
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004   -0.0000   -0.0000   -0.0043    0.0000   -0.0000
+
+
+Funcval =
+
+    0.0052
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0407
+   -0.0011
+   -0.0001
+   -0.4139
+    0.0001
+   -0.0023
+
+
+P =
+
+    0.9351   -0.0002   -0.0000   -0.0654    0.0001   -0.0006
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004   -0.0000   -0.0000   -0.0041    0.0000   -0.0000
+
+
+Funcval =
+
+    0.0051
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0398
+   -0.0010
+   -0.0001
+   -0.4030
+    0.0000
+   -0.0020
+
+
+P =
+
+    0.9355   -0.0003   -0.0000   -0.0694    0.0001   -0.0006
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004   -0.0000   -0.0000   -0.0040    0.0000   -0.0000
+
+
+Funcval =
+
+    0.0050
+
+
+P_store =
+
+   -0.0004   -0.0000    0.0000   -0.0002   -0.0000   -0.0000
+   -0.0004   -0.0000    0.0000   -0.0002   -0.0000   -0.0000
+    0.9289   -0.0000    0.0000   -0.0002   -0.0000   -0.0000
+    0.9295   -0.0000   -0.0000   -0.0063    0.0000   -0.0001
+    0.9300   -0.0001   -0.0000   -0.0122    0.0000   -0.0002
+    0.9305   -0.0001   -0.0000   -0.0179    0.0001   -0.0002
+    0.9311   -0.0001   -0.0000   -0.0234    0.0001   -0.0003
+    0.9315   -0.0001   -0.0000   -0.0287    0.0001   -0.0004
+    0.9320   -0.0001   -0.0000   -0.0338    0.0001   -0.0004
+    0.9325   -0.0002   -0.0000   -0.0387    0.0001   -0.0004
+    0.9330   -0.0002   -0.0000   -0.0435    0.0001   -0.0005
+    0.9334   -0.0002   -0.0000   -0.0481    0.0001   -0.0005
+    0.9338   -0.0002   -0.0000   -0.0526    0.0001   -0.0005
+    0.9343   -0.0002   -0.0000   -0.0570    0.0001   -0.0006
+    0.9347   -0.0002   -0.0000   -0.0613    0.0001   -0.0006
+    0.9351   -0.0002   -0.0000   -0.0654    0.0001   -0.0006
+
+
+dP_store =
+
+   -0.0001    0.0000    0.0000    0.0011    0.0000    0.0000
+    1.0000         0         0         0         0         0
+    0.0001   -0.0000   -0.0000   -0.0006    0.0000   -0.0000
+    0.0001   -0.0000   -0.0000   -0.0006    0.0000   -0.0000
+    0.0001   -0.0000   -0.0000   -0.0006    0.0000   -0.0000
+    0.0001   -0.0000   -0.0000   -0.0005    0.0000   -0.0000
+    0.0000   -0.0000   -0.0000   -0.0005    0.0000   -0.0000
+    0.0000   -0.0000   -0.0000   -0.0005    0.0000   -0.0000
+    0.0000   -0.0000   -0.0000   -0.0005    0.0000   -0.0000
+    0.0000   -0.0000   -0.0000   -0.0005    0.0000   -0.0000
+    0.0000   -0.0000   -0.0000   -0.0005    0.0000   -0.0000
+    0.0000   -0.0000   -0.0000   -0.0005    0.0000   -0.0000
+    0.0000   -0.0000   -0.0000   -0.0004    0.0000   -0.0000
+    0.0000   -0.0000   -0.0000   -0.0004    0.0000   -0.0000
+    0.0000   -0.0000   -0.0000   -0.0004    0.0000   -0.0000
+    0.0000   -0.0000   -0.0000   -0.0004    0.0000   -0.0000
+
+
+PP =
+
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+    0.9355   -0.0003   -0.0000   -0.0694    0.0001   -0.0006
+
+
+Corrr =
+
+         0         0         0    0.0050
+
+
+iter =
+
+     0     0     0    16
+
+
+total_time =
+
+  194.5980
+
+image 31
+
+coefficient_time =
+
+  128.7674
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0143
+    0.0011
+    0.0003
+    0.1532
+   -0.0005
+    0.0005
+
+
+P =
+
+    0.9356   -0.0002   -0.0000   -0.0679    0.0001   -0.0006
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0001    0.0000    0.0000    0.0015   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0026
+
+
+P_store =
+
+    0.9355   -0.0003   -0.0000   -0.0694    0.0001   -0.0006
+
+
+dP_store =
+
+   1.0e-03 *
+
+    0.0143    0.0011    0.0003    0.1532   -0.0005    0.0005
+
+
+PP =
+
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+    0.9356   -0.0002   -0.0000   -0.0679    0.0001   -0.0006
+
+
+Corrr =
+
+         0         0         0    0.0026
+
+
+iter =
+
+     0     0     0     1
+
+
+total_time =
+
+  193.4437
+
+image 36
+
+coefficient_time =
+
+  130.9267
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0433
+    0.0008
+    0.0007
+    0.5833
+    0.0001
+   -0.0012
+
+
+P =
+
+    0.9361   -0.0002   -0.0000   -0.0621    0.0001   -0.0007
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000    0.0058    0.0000   -0.0000
+
+
+Funcval =
+
+    0.0162
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0425
+    0.0008
+    0.0007
+    0.5814
+    0.0001
+   -0.0011
+
+
+P =
+
+    0.9365   -0.0002    0.0000   -0.0563    0.0001   -0.0007
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000    0.0058    0.0000   -0.0000
+
+
+Funcval =
+
+    0.0159
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0417
+    0.0008
+    0.0007
+    0.5795
+    0.0001
+   -0.0010
+
+
+P =
+
+    0.9369   -0.0002    0.0000   -0.0505    0.0001   -0.0007
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000    0.0058    0.0000   -0.0000
+
+
+Funcval =
+
+    0.0156
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0409
+    0.0009
+    0.0007
+    0.5776
+    0.0000
+   -0.0009
+
+
+P =
+
+    0.9373   -0.0002    0.0000   -0.0447    0.0001   -0.0007
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000    0.0058    0.0000   -0.0000
+
+
+Funcval =
+
+    0.0153
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0402
+    0.0009
+    0.0007
+    0.5756
+    0.0000
+   -0.0008
+
+
+P =
+
+    0.9377   -0.0002    0.0000   -0.0389    0.0001   -0.0007
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000    0.0058    0.0000   -0.0000
+
+
+Funcval =
+
+    0.0150
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0394
+    0.0009
+    0.0007
+    0.5735
+   -0.0000
+   -0.0007
+
+
+P =
+
+    0.9381   -0.0002    0.0000   -0.0332    0.0001   -0.0007
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000    0.0057   -0.0000   -0.0000
+
+
+Funcval =
+
+    0.0147
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0387
+    0.0009
+    0.0007
+    0.5714
+   -0.0000
+   -0.0006
+
+
+P =
+
+    0.9385   -0.0002    0.0000   -0.0275    0.0001   -0.0007
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000    0.0057   -0.0000   -0.0000
+
+
+Funcval =
+
+    0.0145
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0380
+    0.0010
+    0.0007
+    0.5692
+   -0.0001
+   -0.0004
+
+
+P =
+
+    0.9389   -0.0002    0.0000   -0.0218    0.0001   -0.0007
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000    0.0057   -0.0000   -0.0000
+
+
+Funcval =
+
+    0.0142
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0373
+    0.0010
+    0.0007
+    0.5670
+   -0.0001
+   -0.0003
+
+
+P =
+
+    0.9392   -0.0002    0.0001   -0.0166    0.0001   -0.0007
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0003    0.0000    0.0000    0.0052   -0.0000   -0.0000
+
+
+Funcval =
+
+    0.0140
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0362
+    0.0010
+    0.0008
+    0.5652
+   -0.0001
+   -0.0003
+
+
+P =
+
+    0.9392   -0.0002    0.0001   -0.0166    0.0001   -0.0007
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-19 *
+
+   -0.0144   -0.0004   -0.0003   -0.2243    0.0000    0.0001
+
+
+Funcval =
+
+    0.0140
+
+
+P =
+
+    1.9009   -0.0002    0.0001   -0.0166    0.0001   -0.0007
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.9616         0         0         0         0         0
+
+
+Funcval =
+
+    0.0216
+
+
+dP =
+
+    0.0003
+   -0.0000
+    0.0000
+   -0.0030
+    0.0000
+   -0.0001
+
+
+P =
+
+    1.9037   -0.0005    0.0001   -0.0468    0.0005   -0.0018
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0029   -0.0003    0.0000   -0.0302    0.0004   -0.0011
+
+
+Funcval =
+
+    0.0199
+
+
+dP =
+
+    0.0002
+   -0.0000
+   -0.0000
+   -0.0018
+    0.0000
+   -0.0000
+
+
+P =
+
+    1.9055   -0.0006    0.0001   -0.0647    0.0006   -0.0020
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0018   -0.0001   -0.0000   -0.0178    0.0001   -0.0002
+
+
+Funcval =
+
+    0.0189
+
+
+dP =
+
+    0.0002
+   -0.0000
+   -0.0000
+   -0.0015
+    0.0000
+   -0.0000
+
+
+P =
+
+    1.9070   -0.0006    0.0000   -0.0797    0.0006   -0.0021
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0015   -0.0001   -0.0000   -0.0150    0.0000   -0.0001
+
+
+Funcval =
+
+    0.0181
+
+
+dP =
+
+    0.0001
+   -0.0000
+   -0.0000
+   -0.0013
+    0.0000
+   -0.0000
+
+
+P =
+
+    1.9084   -0.0007    0.0000   -0.0930    0.0007   -0.0021
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0014   -0.0000   -0.0000   -0.0133    0.0000   -0.0000
+
+
+Funcval =
+
+    0.0173
+
+
+dP =
+
+    0.0001
+   -0.0000
+   -0.0000
+   -0.0012
+    0.0000
+   -0.0000
+
+
+P =
+
+    1.9096   -0.0007    0.0000   -0.1050    0.0007   -0.0021
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0013   -0.0000   -0.0000   -0.0120    0.0000   -0.0000
+
+
+Funcval =
+
+    0.0166
+
+
+dP =
+
+    0.0001
+   -0.0000
+   -0.0000
+   -0.0011
+    0.0000
+    0.0000
+
+
+P =
+
+    1.9108   -0.0008    0.0000   -0.1160    0.0007   -0.0021
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0012   -0.0000   -0.0000   -0.0110    0.0000    0.0000
+
+
+Funcval =
+
+    0.0160
+
+
+dP =
+
+    0.0001
+   -0.0000
+   -0.0000
+   -0.0010
+   -0.0000
+    0.0000
+
+
+P =
+
+    1.9119   -0.0008   -0.0000   -0.1262    0.0007   -0.0021
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0011   -0.0000   -0.0000   -0.0102   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0155
+
+
+dP =
+
+   1.0e-03 *
+
+    0.1028
+   -0.0017
+   -0.0009
+   -0.9600
+   -0.0008
+    0.0026
+
+
+P =
+
+    1.9129   -0.0008   -0.0000   -0.1358    0.0007   -0.0021
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0010   -0.0000   -0.0000   -0.0096   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0149
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0976
+   -0.0013
+   -0.0008
+   -0.9047
+   -0.0010
+    0.0029
+
+
+P =
+
+    1.9139   -0.0008   -0.0000   -0.1449    0.0006   -0.0020
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0010   -0.0000   -0.0000   -0.0090   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0145
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0932
+   -0.0010
+   -0.0008
+   -0.8569
+   -0.0012
+    0.0031
+
+
+P =
+
+    1.9148   -0.0008   -0.0000   -0.1535    0.0006   -0.0020
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0009   -0.0000   -0.0000   -0.0086   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0140
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0892
+   -0.0007
+   -0.0007
+   -0.8149
+   -0.0013
+    0.0032
+
+
+P =
+
+    1.9157   -0.0008   -0.0000   -0.1616    0.0006   -0.0020
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0009   -0.0000   -0.0000   -0.0081   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0136
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0857
+   -0.0005
+   -0.0006
+   -0.7777
+   -0.0014
+    0.0033
+
+
+P =
+
+    1.9166   -0.0008   -0.0000   -0.1694    0.0006   -0.0019
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0009   -0.0000   -0.0000   -0.0078   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0132
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0826
+   -0.0003
+   -0.0006
+   -0.7443
+   -0.0014
+    0.0033
+
+
+P =
+
+    1.9174   -0.0008   -0.0000   -0.1768    0.0006   -0.0019
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0008   -0.0000   -0.0000   -0.0074   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0128
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0798
+   -0.0002
+   -0.0005
+   -0.7142
+   -0.0015
+    0.0033
+
+
+P =
+
+    1.9182   -0.0008   -0.0001   -0.1840    0.0006   -0.0019
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0008   -0.0000   -0.0000   -0.0071   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0124
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0772
+   -0.0000
+   -0.0005
+   -0.6868
+   -0.0015
+    0.0032
+
+
+P =
+
+    1.9190   -0.0008   -0.0001   -0.1908    0.0006   -0.0018
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0008   -0.0000   -0.0000   -0.0069   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0121
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0748
+    0.0001
+   -0.0004
+   -0.6618
+   -0.0015
+    0.0032
+
+
+P =
+
+    1.9197   -0.0008   -0.0001   -0.1974    0.0005   -0.0018
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0007    0.0000   -0.0000   -0.0066   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0117
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0726
+    0.0002
+   -0.0004
+   -0.6388
+   -0.0015
+    0.0032
+
+
+P =
+
+    1.9205   -0.0008   -0.0001   -0.2038    0.0005   -0.0018
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0007    0.0000   -0.0000   -0.0064   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0114
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0705
+    0.0003
+   -0.0003
+   -0.6175
+   -0.0015
+    0.0031
+
+
+P =
+
+    1.9212   -0.0008   -0.0001   -0.2100    0.0005   -0.0017
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0007    0.0000   -0.0000   -0.0062   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0111
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0686
+    0.0004
+   -0.0003
+   -0.5977
+   -0.0015
+    0.0031
+
+
+P =
+
+    1.9218   -0.0008   -0.0001   -0.2160    0.0005   -0.0017
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0007    0.0000   -0.0000   -0.0060   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0108
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0668
+    0.0004
+   -0.0003
+   -0.5793
+   -0.0015
+    0.0030
+
+
+P =
+
+    1.9225   -0.0008   -0.0001   -0.2218    0.0005   -0.0017
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0007    0.0000   -0.0000   -0.0058   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0106
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0652
+    0.0005
+   -0.0003
+   -0.5622
+   -0.0015
+    0.0029
+
+
+P =
+
+    1.9232   -0.0008   -0.0001   -0.2274    0.0005   -0.0017
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0007    0.0000   -0.0000   -0.0056   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0103
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0636
+    0.0005
+   -0.0002
+   -0.5461
+   -0.0015
+    0.0029
+
+
+P =
+
+    1.9238   -0.0008   -0.0001   -0.2329    0.0005   -0.0016
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0006    0.0000   -0.0000   -0.0055   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0100
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0621
+    0.0006
+   -0.0002
+   -0.5309
+   -0.0014
+    0.0028
+
+
+P =
+
+    1.9244   -0.0008   -0.0001   -0.2382    0.0004   -0.0016
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0006    0.0000   -0.0000   -0.0053   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0098
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0607
+    0.0006
+   -0.0002
+   -0.5166
+   -0.0014
+    0.0028
+
+
+P =
+
+    1.9250   -0.0008   -0.0001   -0.2433    0.0004   -0.0016
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0006    0.0000   -0.0000   -0.0052   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0096
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0594
+    0.0007
+   -0.0001
+   -0.5032
+   -0.0014
+    0.0027
+
+
+P =
+
+    1.9256   -0.0008   -0.0001   -0.2484    0.0004   -0.0015
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0006    0.0000   -0.0000   -0.0050   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0093
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0582
+    0.0007
+   -0.0001
+   -0.4904
+   -0.0014
+    0.0027
+
+
+P =
+
+    1.9262   -0.0008   -0.0001   -0.2533    0.0004   -0.0015
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0006    0.0000   -0.0000   -0.0049   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0091
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0570
+    0.0007
+   -0.0001
+   -0.4783
+   -0.0014
+    0.0026
+
+
+P =
+
+    1.9268   -0.0008   -0.0001   -0.2581    0.0004   -0.0015
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0006    0.0000   -0.0000   -0.0048   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0089
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0558
+    0.0008
+   -0.0001
+   -0.4668
+   -0.0013
+    0.0025
+
+
+P =
+
+    1.9273   -0.0008   -0.0001   -0.2627    0.0004   -0.0015
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0006    0.0000   -0.0000   -0.0047   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0087
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0547
+    0.0008
+   -0.0001
+   -0.4558
+   -0.0013
+    0.0025
+
+
+P =
+
+    1.9279   -0.0008   -0.0001   -0.2673    0.0004   -0.0014
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005    0.0000   -0.0000   -0.0046   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0085
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0537
+    0.0008
+   -0.0001
+   -0.4453
+   -0.0013
+    0.0024
+
+
+P =
+
+    1.9284   -0.0008   -0.0001   -0.2717    0.0003   -0.0014
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005    0.0000   -0.0000   -0.0045   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0083
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0527
+    0.0008
+   -0.0000
+   -0.4353
+   -0.0013
+    0.0024
+
+
+P =
+
+    1.9289   -0.0007   -0.0001   -0.2761    0.0003   -0.0014
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005    0.0000   -0.0000   -0.0044   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0081
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0517
+    0.0009
+   -0.0000
+   -0.4257
+   -0.0013
+    0.0023
+
+
+P =
+
+    1.9295   -0.0007   -0.0001   -0.2803    0.0003   -0.0014
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005    0.0000   -0.0000   -0.0043   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0080
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0508
+    0.0009
+   -0.0000
+   -0.4166
+   -0.0012
+    0.0023
+
+
+P =
+
+    1.9300   -0.0007   -0.0001   -0.2845    0.0003   -0.0013
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005    0.0000   -0.0000   -0.0042   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0078
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0499
+    0.0009
+   -0.0000
+   -0.4078
+   -0.0012
+    0.0023
+
+
+P =
+
+    1.9305   -0.0007   -0.0001   -0.2886    0.0003   -0.0013
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005    0.0000   -0.0000   -0.0041   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0076
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0491
+    0.0009
+    0.0000
+   -0.3993
+   -0.0012
+    0.0022
+
+
+P =
+
+    1.9310   -0.0007   -0.0001   -0.2926    0.0003   -0.0013
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005    0.0000    0.0000   -0.0040   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0075
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0482
+    0.0009
+    0.0000
+   -0.3912
+   -0.0012
+    0.0022
+
+
+P =
+
+    1.9314   -0.0007   -0.0001   -0.2965    0.0003   -0.0013
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005    0.0000    0.0000   -0.0039   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0073
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0475
+    0.0009
+    0.0000
+   -0.3834
+   -0.0012
+    0.0021
+
+
+P =
+
+    1.9319   -0.0007   -0.0001   -0.3003    0.0003   -0.0013
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005    0.0000    0.0000   -0.0038   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0071
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0467
+    0.0009
+    0.0000
+   -0.3758
+   -0.0012
+    0.0021
+
+
+P =
+
+    1.9324   -0.0007   -0.0001   -0.3041    0.0003   -0.0012
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005    0.0000    0.0000   -0.0038   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0070
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0459
+    0.0009
+    0.0000
+   -0.3686
+   -0.0011
+    0.0020
+
+
+P =
+
+    1.9328   -0.0007   -0.0001   -0.3078    0.0002   -0.0012
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005    0.0000    0.0000   -0.0037   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0069
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0452
+    0.0009
+    0.0001
+   -0.3616
+   -0.0011
+    0.0020
+
+
+P =
+
+    1.9333   -0.0007   -0.0001   -0.3114    0.0002   -0.0012
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005    0.0000    0.0000   -0.0036   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0067
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0445
+    0.0010
+    0.0001
+   -0.3548
+   -0.0011
+    0.0020
+
+
+P =
+
+    1.9337   -0.0007   -0.0001   -0.3149    0.0002   -0.0012
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000   -0.0035   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0066
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0439
+    0.0010
+    0.0001
+   -0.3482
+   -0.0011
+    0.0019
+
+
+P =
+
+    1.9342   -0.0006   -0.0001   -0.3184    0.0002   -0.0012
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000   -0.0035   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0065
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0432
+    0.0010
+    0.0001
+   -0.3419
+   -0.0011
+    0.0019
+
+
+P =
+
+    1.9346   -0.0006   -0.0001   -0.3218    0.0002   -0.0011
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000   -0.0034   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0063
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0426
+    0.0010
+    0.0001
+   -0.3357
+   -0.0011
+    0.0018
+
+
+P =
+
+    1.9350   -0.0006   -0.0001   -0.3252    0.0002   -0.0011
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000   -0.0034   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0062
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0419
+    0.0010
+    0.0001
+   -0.3297
+   -0.0011
+    0.0018
+
+
+P =
+
+    1.9355   -0.0006   -0.0001   -0.3285    0.0002   -0.0011
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000   -0.0033   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0061
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0413
+    0.0010
+    0.0001
+   -0.3240
+   -0.0010
+    0.0018
+
+
+P =
+
+    1.9359   -0.0006   -0.0001   -0.3317    0.0002   -0.0011
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000   -0.0032   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0060
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0408
+    0.0010
+    0.0001
+   -0.3183
+   -0.0010
+    0.0017
+
+
+P =
+
+    1.9363   -0.0006   -0.0001   -0.3349    0.0002   -0.0011
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000   -0.0032   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0059
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0402
+    0.0010
+    0.0001
+   -0.3129
+   -0.0010
+    0.0017
+
+
+P =
+
+    1.9367   -0.0006   -0.0001   -0.3380    0.0001   -0.0010
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000   -0.0031   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0058
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0396
+    0.0010
+    0.0001
+   -0.3076
+   -0.0010
+    0.0017
+
+
+P =
+
+    1.9371   -0.0006   -0.0001   -0.3411    0.0001   -0.0010
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000   -0.0031   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0057
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0391
+    0.0010
+    0.0001
+   -0.3024
+   -0.0010
+    0.0017
+
+
+P =
+
+    1.9375   -0.0006   -0.0001   -0.3441    0.0001   -0.0010
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000   -0.0030   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0056
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0386
+    0.0010
+    0.0001
+   -0.2974
+   -0.0010
+    0.0016
+
+
+P =
+
+    1.9379   -0.0006   -0.0001   -0.3471    0.0001   -0.0010
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000   -0.0030   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0055
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0381
+    0.0010
+    0.0001
+   -0.2925
+   -0.0010
+    0.0016
+
+
+P =
+
+    1.9382   -0.0005   -0.0001   -0.3500    0.0001   -0.0010
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000   -0.0029   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0054
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0376
+    0.0010
+    0.0001
+   -0.2878
+   -0.0009
+    0.0016
+
+
+P =
+
+    1.9386   -0.0005   -0.0001   -0.3529    0.0001   -0.0010
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000   -0.0029   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0053
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0371
+    0.0010
+    0.0001
+   -0.2831
+   -0.0009
+    0.0015
+
+
+P =
+
+    1.9390   -0.0005   -0.0001   -0.3558    0.0001   -0.0010
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000   -0.0028   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0052
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0366
+    0.0010
+    0.0001
+   -0.2786
+   -0.0009
+    0.0015
+
+
+P =
+
+    1.9393   -0.0005   -0.0001   -0.3585    0.0001   -0.0009
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000   -0.0028   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0051
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0361
+    0.0010
+    0.0001
+   -0.2742
+   -0.0009
+    0.0015
+
+
+P =
+
+    1.9397   -0.0005   -0.0001   -0.3613    0.0001   -0.0009
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000   -0.0027   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0050
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0357
+    0.0010
+    0.0001
+   -0.2699
+   -0.0009
+    0.0015
+
+
+P =
+
+    1.9401   -0.0005   -0.0001   -0.3640    0.0001   -0.0009
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0004    0.0000    0.0000   -0.0027   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0049
+
+
+P_store =
+
+    0.9356   -0.0002   -0.0000   -0.0679    0.0001   -0.0006
+    0.9361   -0.0002   -0.0000   -0.0621    0.0001   -0.0007
+    0.9365   -0.0002    0.0000   -0.0563    0.0001   -0.0007
+    0.9369   -0.0002    0.0000   -0.0505    0.0001   -0.0007
+    0.9373   -0.0002    0.0000   -0.0447    0.0001   -0.0007
+    0.9377   -0.0002    0.0000   -0.0389    0.0001   -0.0007
+    0.9381   -0.0002    0.0000   -0.0332    0.0001   -0.0007
+    0.9385   -0.0002    0.0000   -0.0275    0.0001   -0.0007
+    0.9389   -0.0002    0.0000   -0.0218    0.0001   -0.0007
+    0.9392   -0.0002    0.0001   -0.0166    0.0001   -0.0007
+    0.9392   -0.0002    0.0001   -0.0166    0.0001   -0.0007
+    1.9009   -0.0002    0.0001   -0.0166    0.0001   -0.0007
+    1.9037   -0.0005    0.0001   -0.0468    0.0005   -0.0018
+    1.9055   -0.0006    0.0001   -0.0647    0.0006   -0.0020
+    1.9070   -0.0006    0.0000   -0.0797    0.0006   -0.0021
+    1.9084   -0.0007    0.0000   -0.0930    0.0007   -0.0021
+    1.9096   -0.0007    0.0000   -0.1050    0.0007   -0.0021
+    1.9108   -0.0008    0.0000   -0.1160    0.0007   -0.0021
+    1.9119   -0.0008   -0.0000   -0.1262    0.0007   -0.0021
+    1.9129   -0.0008   -0.0000   -0.1358    0.0007   -0.0021
+    1.9139   -0.0008   -0.0000   -0.1449    0.0006   -0.0020
+    1.9148   -0.0008   -0.0000   -0.1535    0.0006   -0.0020
+    1.9157   -0.0008   -0.0000   -0.1616    0.0006   -0.0020
+    1.9166   -0.0008   -0.0000   -0.1694    0.0006   -0.0019
+    1.9174   -0.0008   -0.0000   -0.1768    0.0006   -0.0019
+    1.9182   -0.0008   -0.0001   -0.1840    0.0006   -0.0019
+    1.9190   -0.0008   -0.0001   -0.1908    0.0006   -0.0018
+    1.9197   -0.0008   -0.0001   -0.1974    0.0005   -0.0018
+    1.9205   -0.0008   -0.0001   -0.2038    0.0005   -0.0018
+    1.9212   -0.0008   -0.0001   -0.2100    0.0005   -0.0017
+    1.9218   -0.0008   -0.0001   -0.2160    0.0005   -0.0017
+    1.9225   -0.0008   -0.0001   -0.2218    0.0005   -0.0017
+    1.9232   -0.0008   -0.0001   -0.2274    0.0005   -0.0017
+    1.9238   -0.0008   -0.0001   -0.2329    0.0005   -0.0016
+    1.9244   -0.0008   -0.0001   -0.2382    0.0004   -0.0016
+    1.9250   -0.0008   -0.0001   -0.2433    0.0004   -0.0016
+    1.9256   -0.0008   -0.0001   -0.2484    0.0004   -0.0015
+    1.9262   -0.0008   -0.0001   -0.2533    0.0004   -0.0015
+    1.9268   -0.0008   -0.0001   -0.2581    0.0004   -0.0015
+    1.9273   -0.0008   -0.0001   -0.2627    0.0004   -0.0015
+    1.9279   -0.0008   -0.0001   -0.2673    0.0004   -0.0014
+    1.9284   -0.0008   -0.0001   -0.2717    0.0003   -0.0014
+    1.9289   -0.0007   -0.0001   -0.2761    0.0003   -0.0014
+    1.9295   -0.0007   -0.0001   -0.2803    0.0003   -0.0014
+    1.9300   -0.0007   -0.0001   -0.2845    0.0003   -0.0013
+    1.9305   -0.0007   -0.0001   -0.2886    0.0003   -0.0013
+    1.9310   -0.0007   -0.0001   -0.2926    0.0003   -0.0013
+    1.9314   -0.0007   -0.0001   -0.2965    0.0003   -0.0013
+    1.9319   -0.0007   -0.0001   -0.3003    0.0003   -0.0013
+    1.9324   -0.0007   -0.0001   -0.3041    0.0003   -0.0012
+    1.9328   -0.0007   -0.0001   -0.3078    0.0002   -0.0012
+    1.9333   -0.0007   -0.0001   -0.3114    0.0002   -0.0012
+    1.9337   -0.0007   -0.0001   -0.3149    0.0002   -0.0012
+    1.9342   -0.0006   -0.0001   -0.3184    0.0002   -0.0012
+    1.9346   -0.0006   -0.0001   -0.3218    0.0002   -0.0011
+    1.9350   -0.0006   -0.0001   -0.3252    0.0002   -0.0011
+    1.9355   -0.0006   -0.0001   -0.3285    0.0002   -0.0011
+    1.9359   -0.0006   -0.0001   -0.3317    0.0002   -0.0011
+    1.9363   -0.0006   -0.0001   -0.3349    0.0002   -0.0011
+    1.9367   -0.0006   -0.0001   -0.3380    0.0001   -0.0010
+    1.9371   -0.0006   -0.0001   -0.3411    0.0001   -0.0010
+    1.9375   -0.0006   -0.0001   -0.3441    0.0001   -0.0010
+    1.9379   -0.0006   -0.0001   -0.3471    0.0001   -0.0010
+    1.9382   -0.0005   -0.0001   -0.3500    0.0001   -0.0010
+    1.9386   -0.0005   -0.0001   -0.3529    0.0001   -0.0010
+    1.9390   -0.0005   -0.0001   -0.3558    0.0001   -0.0010
+    1.9393   -0.0005   -0.0001   -0.3585    0.0001   -0.0009
+    1.9397   -0.0005   -0.0001   -0.3613    0.0001   -0.0009
+
+
+dP_store =
+
+    0.0000    0.0000    0.0000    0.0006    0.0000   -0.0000
+    0.0000    0.0000    0.0000    0.0006    0.0000   -0.0000
+    0.0000    0.0000    0.0000    0.0006    0.0000   -0.0000
+    0.0000    0.0000    0.0000    0.0006    0.0000   -0.0000
+    0.0000    0.0000    0.0000    0.0006    0.0000   -0.0000
+    0.0000    0.0000    0.0000    0.0006   -0.0000   -0.0000
+    0.0000    0.0000    0.0000    0.0006   -0.0000   -0.0000
+    0.0000    0.0000    0.0000    0.0006   -0.0000   -0.0000
+    0.0000    0.0000    0.0000    0.0006   -0.0000   -0.0000
+    0.0000    0.0000    0.0000    0.0006   -0.0000   -0.0000
+    1.0000         0         0         0         0         0
+    0.0003   -0.0000    0.0000   -0.0030    0.0000   -0.0001
+    0.0002   -0.0000   -0.0000   -0.0018    0.0000   -0.0000
+    0.0002   -0.0000   -0.0000   -0.0015    0.0000   -0.0000
+    0.0001   -0.0000   -0.0000   -0.0013    0.0000   -0.0000
+    0.0001   -0.0000   -0.0000   -0.0012    0.0000   -0.0000
+    0.0001   -0.0000   -0.0000   -0.0011    0.0000    0.0000
+    0.0001   -0.0000   -0.0000   -0.0010   -0.0000    0.0000
+    0.0001   -0.0000   -0.0000   -0.0010   -0.0000    0.0000
+    0.0001   -0.0000   -0.0000   -0.0009   -0.0000    0.0000
+    0.0001   -0.0000   -0.0000   -0.0009   -0.0000    0.0000
+    0.0001   -0.0000   -0.0000   -0.0008   -0.0000    0.0000
+    0.0001   -0.0000   -0.0000   -0.0008   -0.0000    0.0000
+    0.0001   -0.0000   -0.0000   -0.0007   -0.0000    0.0000
+    0.0001   -0.0000   -0.0000   -0.0007   -0.0000    0.0000
+    0.0001   -0.0000   -0.0000   -0.0007   -0.0000    0.0000
+    0.0001    0.0000   -0.0000   -0.0007   -0.0000    0.0000
+    0.0001    0.0000   -0.0000   -0.0006   -0.0000    0.0000
+    0.0001    0.0000   -0.0000   -0.0006   -0.0000    0.0000
+    0.0001    0.0000   -0.0000   -0.0006   -0.0000    0.0000
+    0.0001    0.0000   -0.0000   -0.0006   -0.0000    0.0000
+    0.0001    0.0000   -0.0000   -0.0006   -0.0000    0.0000
+    0.0001    0.0000   -0.0000   -0.0005   -0.0000    0.0000
+    0.0001    0.0000   -0.0000   -0.0005   -0.0000    0.0000
+    0.0001    0.0000   -0.0000   -0.0005   -0.0000    0.0000
+    0.0001    0.0000   -0.0000   -0.0005   -0.0000    0.0000
+    0.0001    0.0000   -0.0000   -0.0005   -0.0000    0.0000
+    0.0001    0.0000   -0.0000   -0.0005   -0.0000    0.0000
+    0.0001    0.0000   -0.0000   -0.0005   -0.0000    0.0000
+    0.0001    0.0000   -0.0000   -0.0005   -0.0000    0.0000
+    0.0001    0.0000   -0.0000   -0.0004   -0.0000    0.0000
+    0.0001    0.0000   -0.0000   -0.0004   -0.0000    0.0000
+    0.0001    0.0000   -0.0000   -0.0004   -0.0000    0.0000
+    0.0001    0.0000   -0.0000   -0.0004   -0.0000    0.0000
+    0.0000    0.0000   -0.0000   -0.0004   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0004   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0004   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0004   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0004   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0004   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0004   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0004   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0003   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0003   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0003   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0003   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0003   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0003   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0003   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0003   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0003   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0003   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0003   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0003   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0003   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0003   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0003   -0.0000    0.0000
+    0.0000    0.0000    0.0000   -0.0003   -0.0000    0.0000
+
+
+PP =
+
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+    1.9401   -0.0005   -0.0001   -0.3640    0.0001   -0.0009
+
+
+Corrr =
+
+         0         0         0    0.0049
+
+
+iter =
+
+     0     0     0    68
+
+
+total_time =
+
+  962.6145
+
+image 41
+
+coefficient_time =
+
+  133.1305
+
+
+dP =
+
+   1.0e-03 *
+
+    0.0471
+    0.0004
+    0.0003
+    0.1316
+   -0.0006
+    0.0006
+
+
+P =
+
+    1.9405   -0.0005   -0.0001   -0.3627    0.0001   -0.0009
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+    0.0005    0.0000    0.0000    0.0013   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0028
+
+
+P_store =
+
+    1.9401   -0.0005   -0.0001   -0.3640    0.0001   -0.0009
+
+
+dP_store =
+
+   1.0e-03 *
+
+    0.0471    0.0004    0.0003    0.1316   -0.0006    0.0006
+
+
+PP =
+
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+    1.9405   -0.0005   -0.0001   -0.3627    0.0001   -0.0009
+
+
+Corrr =
+
+         0         0         0    0.0028
+
+
+iter =
+
+     0     0     0     1
+
+
+total_time =
+
+  196.5781
+
+image 46
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bicubicCoefficients', 'D:\Work\Masters\DIC_Program\bicubicCoefficients.m', 15)" style="font-weight:bold">bicubicCoefficients</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\bicubicCoefficients.m',15,0)">line 15</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('getBicubicValues', 'D:\Work\Masters\DIC_Program\getBicubicValues.m', 7)" style="font-weight:bold">getBicubicValues</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\getBicubicValues.m',7,0)">line 7</a>)
+			coef(i,j,:)=reshape(bicubicCoefficients(F(i-1:i+2,j-1:j+2)),[1,1,16]);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dicNR_temp', 'D:\Work\Masters\DIC_Program\dicNR_temp.m', 155)" style="font-weight:bold">dicNR_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\dicNR_temp.m',155,0)">line 155</a>)
+				coef=getBicubicValues(G_in);
+} 
+clc
+diary('checkthisout43.txt')

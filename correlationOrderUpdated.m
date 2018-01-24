@@ -5,19 +5,23 @@ function [process_sorted,getindex]=correlationOrderUpdated(subpos,selected,valid
 	done_subsets=zeros(size(subpos));
 	process(1,:)=[0,selected(1),selected(2),0,0];
 	[per_uniq,done_subsets]=nextPerimeter(selected,done_subsets,valid_subsets);
-	for i=2:max(size(per_uniq))+1
+	for i=2:size(per_uniq,1)+1
 		process(i,1)=1;
 		process(i,2:end)=per_uniq(i-1,:);
 	end
-
+	[~,indexx,~]=unique(process(:,2:3), 'rows', 'first');
+	process=process(sort(indexx,1),:);
 	count=2;
-	while max(size(process))<number_of_subsets
+	while size(process,1)<number_of_subsets
 		[per_uniq,done_subsets]=nextPerimeter(per_uniq,done_subsets,valid_subsets);
 		num_of_elements=size(process,1);
-		for i=(num_of_elements+1):(max(size(per_uniq))+num_of_elements)
+		for i=(num_of_elements+1):(size(per_uniq,1)+num_of_elements)
 			process(i,1)=count;
-			process(i,2:end)=per_uniq(i-num_of_elements,:);
+			process(i,2:5)=per_uniq(i-num_of_elements,:);
 		end
+		% process
+		[~,indexx,~]=unique(process(:,2:3), 'rows', 'first');
+		process=process(sort(indexx,1),:);
 		count=count+1;
 	end
 
@@ -69,9 +73,9 @@ function [process_sorted,getindex]=correlationOrderUpdated(subpos,selected,valid
 	process_sorted=sortrows(process);
 	process_sorted(1,:)=[0,selected(1),selected(2),0,0];
 
-	for i=1:max(size(process_sorted))
+	for i=1:size(process_sorted,1)
 		count=1;
-		for j=1:max(size(process_sorted))
+		for j=1:size(process_sorted,1)
 			if (process_sorted(i,2)==process_sorted(j,4))&(process_sorted(i,3)==process_sorted(j,5))
 				getindex{i}(count+1)=j;
 				count=count+1;
@@ -92,7 +96,7 @@ function [per_uniq,done_subsets]=nextPerimeter(A,done_subsets,valid_subsets)
 		per(count+3,:)=[A(i,1), A(i,2)+1,A(i,1),A(i,2)];
 		count=count+4;
 	end
-	for i=1:max(size(per))
+	for i=1:size(per,1)
 		if (per(i,1)<1)||(per(i,1)>r_s)||(per(i,2)<1)||(per(i,2)>c_s)
 			per(i,:)=[0 0 0 0];
 		elseif (done_subsets(per(i,1),per(i,2))==1)||(valid_subsets(per(i,1),per(i,2))==0)
@@ -101,11 +105,14 @@ function [per_uniq,done_subsets]=nextPerimeter(A,done_subsets,valid_subsets)
 			per(i,:)=[0 0 0 0];
 		end
 	end
-	per_uniq=unique(per,'rows','stable');
+	percheck=per(:,1:2);
+	[~,index,~]=unique(percheck,'rows','stable');
+	per_uniq=per(index,:);
+	% per_uniq=unique(per,'rows','stable');
 	check_zeros=0;
-	for i=1:max(size(per_uniq))
+	for i=1:size(per_uniq,1)
 		if per_uniq(i,:)==[0 0 0 0]
-			for j=i:max(size(per_uniq))-1
+			for j=i:size(per_uniq,1)-1
 				per_uniq(j,:)=per_uniq(j+1,:);
 			end
 			check_zeros=1;
@@ -115,7 +122,7 @@ function [per_uniq,done_subsets]=nextPerimeter(A,done_subsets,valid_subsets)
 		per_uniq=per_uniq(1:end-1,:);
 	end
 	% per_uniq=unique(per_uniq,'stable');
-	for i=1:max(size(per_uniq))
+	for i=1:size(per_uniq,1)
 		done_subsets(per_uniq(i,1),per_uniq(i,2))=1;
 	end
 end

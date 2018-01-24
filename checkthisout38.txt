@@ -1,0 +1,726 @@
+close all; clear; clc; dicNR_temp
+ 
+B =
+ 
+[ P2 + 1,     P3, P1]
+[     P5, P6 + 1, P4]
+[      0,      0,  1]
+ 
+
+elements =
+
+    21
+
+
+ans =
+
+    21     5
+
+
+ans =
+
+    21     2
+
+image 6
+
+P =
+
+   1.0e-03 *
+
+   -0.0341   -0.0011   -0.0037   -0.3419   -0.0056    0.0092
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0351
+
+
+P =
+
+    0.0125   -0.0004   -0.0022    0.0023   -0.0002   -0.0003
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0231
+
+
+P =
+
+    0.0129   -0.0005   -0.0021    0.0027   -0.0001   -0.0004
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0091
+
+
+P =
+
+    0.0135   -0.0005   -0.0021    0.0027   -0.0001   -0.0004
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0047
+
+
+P_store =
+
+         0         0         0         0         0         0
+   -0.0000   -0.0000   -0.0000   -0.0003   -0.0000    0.0000
+    0.0125   -0.0004   -0.0022    0.0023   -0.0002   -0.0003
+    0.0129   -0.0005   -0.0021    0.0027   -0.0001   -0.0004
+
+
+dP_store =
+
+   -0.0000   -0.0000   -0.0000   -0.0000   -0.0000    0.0000
+   -0.0014    0.0000    0.0002   -0.0003    0.0000    0.0000
+   -0.0001    0.0000   -0.0000   -0.0001   -0.0000    0.0000
+   -0.0001   -0.0000   -0.0000    0.0000    0.0000    0.0000
+
+
+PP =
+
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+    0.0135   -0.0005   -0.0021    0.0027   -0.0001   -0.0004
+
+
+Corrr =
+
+         0         0         0         0    0.0047
+
+
+iter =
+
+     0     0     0     0     4
+
+Elapsed time is 50.218487 seconds.
+
+total_time =
+
+   50.2208
+
+image 11
+
+coefficient_time =
+
+  166.4662
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3826   -0.0018    0.0003   -0.1832   -0.0079   -0.0011
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0017
+
+
+P_store =
+
+     0     0     0     0     0     0
+
+
+dP_store =
+
+   1.0e-04 *
+
+   -0.3826   -0.0018    0.0003   -0.1832   -0.0079   -0.0011
+
+
+PP =
+
+   1.0e-03 *
+
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+   -0.3826   -0.0018    0.0003   -0.1832   -0.0079   -0.0011
+
+
+Corrr =
+
+         0         0         0    0.0017
+
+
+iter =
+
+     0     0     0     1
+
+
+total_time =
+
+  241.5389
+
+image 16
+
+coefficient_time =
+
+   85.5633
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0018
+
+
+P_store =
+
+   1.0e-03 *
+
+   -0.3826   -0.0018    0.0003   -0.1832   -0.0079   -0.0011
+
+
+dP_store =
+
+   1.0e-04 *
+
+    0.1652    0.0018   -0.0014    0.6315   -0.0040    0.0097
+
+
+PP =
+
+   1.0e-03 *
+
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+Corrr =
+
+         0         0         0    0.0018
+
+
+iter =
+
+     0     0     0     1
+
+
+total_time =
+
+  139.8822
+
+image 21
+
+coefficient_time =
+
+  162.2692
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    64
+
+
+Funcval =
+
+    0.0103
+
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NRtracking3_temp>getJac6', 'D:\Work\Masters\DIC_Program\NRtracking3_temp.m', 720)" style="font-weight:bold">NRtracking3_temp>getJac6</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NRtracking3_temp.m',720,0)">line 720</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NRtracking3_temp', 'D:\Work\Masters\DIC_Program\NRtracking3_temp.m', 115)" style="font-weight:bold">NRtracking3_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NRtracking3_temp.m',115,0)">line 115</a>)
+					[G,J,H,f1]=getJac6(coef,(P+(dP')*lambda1),dy,dx,x0,y0,F);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dicNR_temp', 'D:\Work\Masters\DIC_Program\dicNR_temp.m', 218)" style="font-weight:bold">dicNR_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\dicNR_temp.m',218,0)">line 218</a>)
+			i=4;
+} 
+close all; clear; clc; dicNR_temp
+ 
+B =
+ 
+[ P2 + 1,     P3, P1]
+[     P5, P6 + 1, P4]
+[      0,      0,  1]
+ 
+
+elements =
+
+    21
+
+
+ans =
+
+    21     5
+
+
+ans =
+
+    21     2
+
+image 21
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-16 *
+
+    0.0775   -0.0008   -0.0004   -0.5211   -0.0001    0.0001
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-19 *
+
+    0.0293   -0.0003   -0.0002   -0.1968   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-19 *
+
+    0.0293   -0.0003   -0.0002   -0.1968   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-19 *
+
+    0.0293   -0.0003   -0.0002   -0.1968   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0103
+
+
+P =
+
+   1.0e-03 *
+
+   -0.3824   -0.0018    0.0003   -0.1825   -0.0079   -0.0010
+
+
+iterations =
+
+    74
+
+
+stepChange =
+
+   1.0e-19 *
+
+    0.0293   -0.0003   -0.0002   -0.1968   -0.0000    0.0000
+
+
+Funcval =
+
+    0.0103
+
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NRtracking3_temp>getJac6', 'D:\Work\Masters\DIC_Program\NRtracking3_temp.m', 720)" style="font-weight:bold">NRtracking3_temp>getJac6</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NRtracking3_temp.m',720,0)">line 720</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NRtracking3_temp', 'D:\Work\Masters\DIC_Program\NRtracking3_temp.m', 111)" style="font-weight:bold">NRtracking3_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\NRtracking3_temp.m',111,0)">line 111</a>)
+					[G,J,H,f2]=getJac6(coef,(P+(dP')*lambda2),dy,dx,x0,y0,F);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dicNR_temp', 'D:\Work\Masters\DIC_Program\dicNR_temp.m', 219)" style="font-weight:bold">dicNR_temp</a> (<a href="matlab: opentoline('D:\Work\Masters\DIC_Program\dicNR_temp.m',219,0)">line 219</a>)
+				[PP(i,:),Corrr(i),iter(i)]=NRtracking3_temp('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset
+                position',subpos{process_order(i,2),process_order(i,3)},'guess',Proc.imnr{k-inc}.D(i,6:Pend),'coef',coef)
+} 
+clc
+diary('checkthisout39.txt')

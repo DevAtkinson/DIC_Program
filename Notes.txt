@@ -1,0 +1,68 @@
+Notes
+
+10/01/2018
+12:50 - 15:20	Get re-acquanted with code for newton rapshon dic (dicNR and NRtracking3)
+				Although the derivation of the getJac functions in NRtracking3 seem to be legit (according to paper Deformation 
+				Measurement by DIC: Implementation of a second-order displacement gradient) they do not converge the P values
+18:00 - 17:00	Try add a progress bar to dicNR so that you can see the progress of a pictures correlation since it can be slow
+				Figured out you must do (-jacky') instead of (-jacky)' for the hessian
+
+14/01/2018
+14:00 - 16:00	Determine if zero-mean sum of squared difference (getJac5) is working (check what correlation values it is giving)
+				Write function getJac6 in NRtracking3.m to perform normalised sum of squared difference NR
+				change P=P+dP to P=P-dP ( which is consistent with the papers)
+				write getJac7 which has the full derivatives (to see if this has an effect)
+				~ robustness of the NR algorithm is an issue (also needs considerable ram for coefficients)
+				Created getJac8 which is normalised cross correlation 
+
+				getJac6 breaks down at image 3 whether it is P+dP or P-dP
+				getJac7 +/- (+0.2) fails at image 3 - for (-0.2 it gets to like 0.049 ish ~ breaks down in the same way at image 6 (0.0756))
+
+16/01/2018
+10:50 - 19:00	correlate using lucas kanade (using same parameters) so that these results can be compared to those of Newton Raphson to figure
+				out what is going wrong.
+				Using the lucas-kanade (zero-mean) results the getJac5 NR algorithm (P+0.4*dP) converges to the required correlation value (0.005)
+				Reading and trying to understand "newton-type methods" and how they use cholesky to improve convergence
+				Tried to implement cholesky to improve stability but it doesnt work. The cholesky factor (matrix) becomes complex and so its breaks down
+
+
+17/01/2018
+11:20 - 14:00	Continue working on cholesky implementation.
+				Look into line search methods (golden section) - seems to work initially but can get stuck at an unacceptable 
+				correlation coefficient (with getJac6) (same with getJac5) - the hessian doesn't seem to allow the algorithm to
+				make changes to the variable that needs to be changed (x disp) without also changing other variables so the 
+				algorithm gets stuck since it cant improve the correlation coefficient.
+15:30 - 17:30	Try to create getJac6_2 to only work with x and y disp but it gave a NaN jacobian and hessian
+				Add an if statement in NRtracking3_temp to consider only the x/y disp if the norm of the stepChange is small - seems to work
+				but it can cause a big increase in the correlation value.
+				Changed algorithm (NRtracking3_temp) to first perform golden section for x and y disp and then all the variables - seems to
+				give much quicker correlation (remember that the DIC data used is from a tension specimen so it is mostly x/y disp)
+
+18/01/2018
+11:30 - 16:00	Adjust exit condition for NRtracking3_temp so that it exits if the correlation coefficient doesn't change significantly and 
+				it is still acceptable.
+
+23/01/2018
+11:40 - 14:10	Improve efficiency of dicNR_temp by only passing the interpolation coefficients that are relevant to the subset so that each worker
+				uses less memory allowing more cores to be used.
+				Created getJac6_eff so that normalised sum of square difference can be used more efficiently.
+15:15 - 17:30	Write getJac1 to do zero-mean normalised sum of squared difference and test it out.
+				Edit passing of interpolation coefficients in first iteration of NR (dicNR_temp) - wasn't working
+
+34/01/2018
+11:00 - 	Edit passing of interpolation coefficients to take into account the displacement in the x and y directions so that the 
+				correct area of coefficient values are passed. - not working, still tries coef matrix value outside of range
+
+
+
+
+TO DO:
+1. For NR only determine coefficients for data that is close to the area of correlation to reduce memory usage and allow more cores to be used - done somewhat
+2. Get NR working with interpolation based on F and not G (speed up process)
+3. Rewrite getJac functions to be be more efficient - done
+4. Pass the exit condition of the correlation step so that it can be improved upon later if need be.
+
+
+
+ripple
+ethos

@@ -49,11 +49,42 @@ Notes
 15:15 - 17:30	Write getJac1 to do zero-mean normalised sum of squared difference and test it out.
 				Edit passing of interpolation coefficients in first iteration of NR (dicNR_temp) - wasn't working
 
-34/01/2018
-11:00 - 	Edit passing of interpolation coefficients to take into account the displacement in the x and y directions so that the 
+24/01/2018
+11:00 - 14:00	Edit passing of interpolation coefficients to take into account the displacement in the x and y directions so that the 
 				correct area of coefficient values are passed. - not working, still tries coef matrix value outside of range
 
+25/01/2018
+11:00 - 13:30	Start writing section on Newton-Raphson method and try newtons method with absolute of hessian. (absolute of hessian does 
+				not improve situation - can lead to slower convergence or none at all)
+14:50 - 19:00	Considering how to finalise NR code so that its is more robust and corrects correlations with bad correlation coefficients.
+				Try dicNR of zero-mean normalised sum of squared difference with stricter stopping condition to see if I get better results.
+				Change NRtracking3_temp to try artificial search directions (and keep the best if it is better than the previous corr value) 
+				when the norm of the step change is small.
+				Was using xa=-10 and xb=10 in golden section line search without realising that the correlation coefficient might not be
+				convex over this region - this is why algorithm often fails.
+				Create function GoldenBracket to bracket the golden section search range- seem to improve stability
+				Change stopping condition so that it is dependent more on the norm of the step change.
+				Also only allow the hessian and jacobian to dictate the next iteration step if the funcval is not bigger than a multiple 
+				of the previous funcval
 
+26/01/2018
+10:30 - 18:30	Work on stopping criteria in NRtracking3_temp.
+				Improve bracketing function by trying many values and selecting the lowest-improved robustness (since there are so many dimensions
+				the line of search in the dP direction is not guaranteed to be convex and it is unknown over what region it will be convex).
+
+28/01/2018
+11:20 - 17:30	Write section on Newton raphson - explain how determine hessian and jacobian.
+				Try create outlier function to look for outliers and correct them.
+				Add missing correlation coefficient to DICtracking2.m for lucas-kanade.
+				Write function correctFloor.m to remove the D() operator in the hessian and jacobian of the light intensity values
+				Try to figure out more efficient interpolation - got matrix multiplication working but it takes longer than using for loops
+
+30/01/2018
+10:30 - 15:00	Write section on golden section search method
+
+31/01/2018
+11:00 - 	Rewrite Newton-raphson section and make congruent.
+				Correct correlation equations in report
 
 
 TO DO:
@@ -61,8 +92,8 @@ TO DO:
 2. Get NR working with interpolation based on F and not G (speed up process)
 3. Rewrite getJac functions to be be more efficient - done
 4. Pass the exit condition of the correlation step so that it can be improved upon later if need be.
-
-
+5. Bracketing function for golden search to ensure search interval is convex
+6. Machine learning/deep learning to adjust parameters of stopping criteria in NRtracking3_temp
 
 ripple
 ethos

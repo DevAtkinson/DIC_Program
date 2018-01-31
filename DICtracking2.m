@@ -142,11 +142,13 @@ function [P_final,Corr_out]=DICtracking2(varargin)
 			end
 		elseif corrleation_type==2
 			%normalised sum of squared difference
-			% for l=1:r
-			% 	for j=1:c
-			% 		q=q+dfdw{l,j}'*(F(l,j)-Fmean-dF/dG*(G_defromed(l,j)-G_def_mean));
-			% 	end
-			% end
+			dG_temp=sum(sum((G_defromed-G_def_mean).^2));
+			dG=sqrt(dG_temp);
+			for l=1:r
+				for j=1:c
+					q=q+dfdw{l,j}'*(F(l,j)-dF/dG*(G_defromed(l,j)));
+				end
+			end
 		elseif corrleation_type==1
 			%zero mean sum of squared difference
 			% C_temp=(F-Fmean-(G_defromed-G_def_mean));
@@ -191,7 +193,7 @@ function [P_final,Corr_out]=DICtracking2(varargin)
 				if corrleation_type==3
 					criteria=criteria+((F(l,j)-Fmean)/dF -(G_defromed(l,j)-G_def_mean)/dG)^2;
 				elseif corrleation_type==2
-
+					criteria=criteria+((F(l,j))/dF -(G_defromed(l,j))/dG)^2;
 				elseif corrleation_type==1
 					criteria=criteria+((F(l,j)-Fmean) -(G_defromed(l,j)-G_def_mean))^2;
 				end

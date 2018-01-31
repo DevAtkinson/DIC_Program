@@ -7,7 +7,8 @@ function dicNR_temp()
 	% save_as='FixNR_Sunday2_lucasKanade.mat';
 	% save_as='delete_me3.mat';
 	% save_as='Try_NR_see_if_working_GS_getJac5.mat';
-	save_as='check_zmnssd.mat';
+	% save_as='check_zmnssd.mat';
+	save_as='check_zmnssd_smart_artificial_search_2_stopcheck3.mat';
 	% save_as='Richard_CTC_41_NR.mat';
 	% save_as='Richard_CTC_41_NR_try_over_sum(getjac3).mat';
 	% save_as='Cororder.mat';
@@ -25,7 +26,7 @@ function dicNR_temp()
 
 	if exist(save_as,'file')
 		load(save_as);
-		Proc.correlated_to=191;
+		Proc.correlated_to=51;
 		subpos=Proc.subpos;
 		% guess_store=Proc.guess;
 		guess_store=[0 0];
@@ -102,6 +103,7 @@ function dicNR_temp()
 	end
 
 	% save_as='delete_me3.mat';
+	save_as='check_zmnssd_smart_artificial_search_2_alt_coef_matrix.mat';
 	
 
 	image_folder = fullfile( PathName , FileName{1} );
@@ -153,12 +155,12 @@ function dicNR_temp()
 		
 		if (k==(1+inc))
 			tic
-			[PP(1,:),Corrr(1),iter(1)]=NRtracking3_temp('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'stepsize',stepsize,'subset position',subpos{process_order(1,2),process_order(1,3)},'guess',guess,'coef',coef((subpos{process_order(1,2),process_order(1,3)}.coords(1)-stepsize):(subpos{process_order(1,2),process_order(1,3)}.coords(3)+stepsize),(subpos{process_order(1,2),process_order(1,3)}.coords(2)-stepsize):(subpos{process_order(1,2),process_order(1,3)}.coords(4)+stepsize),:),'coef_shift',[0 0])
+			[PP(1,:),Corrr(1),iter(1)]=NRtracking3_temp('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'stepsize',stepsize,'subset position',subpos{process_order(1,2),process_order(1,3)},'guess',guess,'coef',coef((subpos{process_order(1,2),process_order(1,3)}.coords(1)-stepsize):(subpos{process_order(1,2),process_order(1,3)}.coords(3)+stepsize),(subpos{process_order(1,2),process_order(1,3)}.coords(2)-stepsize):(subpos{process_order(1,2),process_order(1,3)}.coords(4)+stepsize),:),'coef_shift',[0 0 1])
 			toc
 			for i=2:elements
 			% 	% tic
 				best_guess=bestGuess(Corrr,i-1);
-				[PP(i,:),Corrr(i),iter(i)]=NRtracking3_temp('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'stepsize',stepsize,'subset position',subpos{process_order(i,2),process_order(i,3)},'guess',PP(best_guess,:),'coef',coef((subpos{process_order(i,2),process_order(i,3)}.coords(1)-stepsize):(subpos{process_order(i,2),process_order(i,3)}.coords(3)+stepsize),(subpos{process_order(i,2),process_order(i,3)}.coords(2)-stepsize):(subpos{process_order(i,2),process_order(i,3)}.coords(4)+stepsize),:),'coef_shift',[0 0])
+				[PP(i,:),Corrr(i),iter(i)]=NRtracking3_temp('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'stepsize',stepsize,'subset position',subpos{process_order(i,2),process_order(i,3)},'guess',PP(best_guess,:),'coef',coef((subpos{process_order(i,2),process_order(i,3)}.coords(1)-stepsize):(subpos{process_order(i,2),process_order(i,3)}.coords(3)+stepsize),(subpos{process_order(i,2),process_order(i,3)}.coords(2)-stepsize):(subpos{process_order(i,2),process_order(i,3)}.coords(4)+stepsize),:),'coef_shift',[0 0 1])
 			% 	% [PP(i,:),Corrr(i)]=NRtracking3('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'subset position',subpos{process_order(i,2),process_order(i,3)},'guess',PP(i-1,:),'coef',coef)
 			% 	% toc
 			end
@@ -180,12 +182,31 @@ function dicNR_temp()
 				% shift the search area according to the previous displacement estimates
 				Pshift=Proc.imnr{k-inc}.D(i,6:Pend);
 				coef_shift=[floor(Pshift(4)), floor(Pshift(1))]; %shift of coefficients (first y then x)
-				coef_shift(3)=4;
+				coef_shift(3)=1;
 				% coofs=[(subpos{process_order(i,2),process_order(i,3)}.coords(1)-stepsize+coef_shift(1)):(subpos{process_order(i,2),process_order(i,3)}.coords(3)+stepsize+coef_shift(1)),(subpos{process_order(i,2),process_order(i,3)}.coords(2)-stepsize+coef_shift(2)):(subpos{process_order(i,2),process_order(i,3)}.coords(4)+stepsize+coef_shift(2))];
 				% coef_pass=coef((subpos{process_order(i,2),process_order(i,3)}.coords(1)-stepsize):(subpos{process_order(i,2),process_order(i,3)}.coords(3)+stepsize),(subpos{process_order(i,2),process_order(i,3)}.coords(2)-stepsize):(subpos{process_order(i,2),process_order(i,3)}.coords(4)+stepsize),:);
 				[PP(i,:),Corrr(i),iter(i)]=NRtracking3_temp('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'stepsize',stepsize,'subset position',subpos{process_order(i,2),process_order(i,3)},'guess',Proc.imnr{k-inc}.D(i,6:Pend),'coef',coef((subpos{process_order(i,2),process_order(i,3)}.coords(1)-stepsize*coef_shift(3)+coef_shift(1)):(subpos{process_order(i,2),process_order(i,3)}.coords(3)+stepsize*coef_shift(3)+coef_shift(1)),(subpos{process_order(i,2),process_order(i,3)}.coords(2)-stepsize*coef_shift(3)+coef_shift(2)):(subpos{process_order(i,2),process_order(i,3)}.coords(4)+stepsize*coef_shift(3)+coef_shift(2)),:),'coef_shift',coef_shift)
 				% ppm.increment();
 			end
+			PP
+			Corrr
+			iter
+			[out,minindex]=testOutlier(Corrr)
+			for i=1:elements
+				if out(i)==1
+					% shift the search area according to the previous displacement estimates
+					Pshift=PP(minindex,:);
+					coef_shift=[floor(Pshift(4)), floor(Pshift(1))]; %shift of coefficients (first y then x)
+					coef_shift(3)=2;
+					% coofs=[(subpos{process_order(i,2),process_order(i,3)}.coords(1)-stepsize+coef_shift(1)):(subpos{process_order(i,2),process_order(i,3)}.coords(3)+stepsize+coef_shift(1)),(subpos{process_order(i,2),process_order(i,3)}.coords(2)-stepsize+coef_shift(2)):(subpos{process_order(i,2),process_order(i,3)}.coords(4)+stepsize+coef_shift(2))];
+					% coef_pass=coef((subpos{process_order(i,2),process_order(i,3)}.coords(1)-stepsize):(subpos{process_order(i,2),process_order(i,3)}.coords(3)+stepsize),(subpos{process_order(i,2),process_order(i,3)}.coords(2)-stepsize):(subpos{process_order(i,2),process_order(i,3)}.coords(4)+stepsize),:);
+					[PP(i,:),Corrr(i),iter(i)]=NRtracking3_temp('undeformed image',F_in,'deformed image',G_in,'subset size',subsize,'stepsize',stepsize,'subset position',subpos{process_order(i,2),process_order(i,3)},'guess',PP(minindex,:),'coef',coef((subpos{process_order(i,2),process_order(i,3)}.coords(1)-stepsize*coef_shift(3)+coef_shift(1)):(subpos{process_order(i,2),process_order(i,3)}.coords(3)+stepsize*coef_shift(3)+coef_shift(1)),(subpos{process_order(i,2),process_order(i,3)}.coords(2)-stepsize*coef_shift(3)+coef_shift(2)):(subpos{process_order(i,2),process_order(i,3)}.coords(4)+stepsize*coef_shift(3)+coef_shift(2)),:),'coef_shift',coef_shift)
+					% ppm.increment();
+				end
+			end
+			PP
+			Corrr
+			iter
 			% j=4;
 			for j=1:elements
 				% Proc.im{k}.D(j,6:11)=PP(j,:);
@@ -215,5 +236,18 @@ function out=bestGuess(Cor,n)
 		end
 	else
 		out=n;
+	end
+end
+
+%function to determine outliers in correlation value
+function [out,minindex]=testOutlier(Cor)
+	[minval,minindex]=min(Cor);
+	for i=1:max(size(Cor))
+		if Cor(i)>4*minval
+			out(i)=1;
+		else
+			out(i)=0;
+		end
+			
 	end
 end

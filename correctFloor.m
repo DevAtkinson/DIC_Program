@@ -7,6 +7,11 @@ function correctFloor(fileID)
 	    lines{count}=tline;
 	    tline = fgetl(fid);
 	end
+	old='D(D(D(D(floor))))';
+	new='floor';
+	for i=1:count
+		lines{i} = replace(lines{i},old,new);
+	end
 	old='D(D(D(floor)))';
 	new='floor';
 	for i=1:count
@@ -22,8 +27,8 @@ function correctFloor(fileID)
 	for i=1:count
 		lines{i} = replace(lines{i},old,new);
 	end
-	fid2=fopen('testing_correctFloor.m','w');
+	fid2=fopen(fileID,'w');
 	for i=1:count
 		fprintf(fid2,'%s\n',lines{i});
 	end
-end
+end 

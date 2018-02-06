@@ -83,8 +83,25 @@ Notes
 10:30 - 15:00	Write section on golden section search method
 
 31/01/2018
-11:00 - 	Rewrite Newton-raphson section and make congruent.
+11:00 - 18:00	Rewrite Newton-raphson section and make congruent.
 				Correct correlation equations in report
+
+02/02/2018
+12:20 - 15:00	Check methods for determining convexity of mutli-dimensional functions in bracketing algorithm. - not done much
+
+04/02/2018
+12:00 - 14:20	Create time plan on office 365 planner
+				Create new dic.m file that performs both NR and LK using same call file.
+				Try create NR_symbolic which is meant to create the functions for the Jacobian and Hessian in a similar manner to symbolic_warp
+15:20 - 17:30	Continue working on NR_symbolic - got working
+				Use correct floor to remove D() operators within NR_symbolic
+				Check how to pass name of a function to a function (use str2func to convert string to function)
+
+05/02/2018
+10:30 - 13:00	got str2func working so that the warp function changes dynamically within the NR optmization algorithm (NRtracking4.m)
+				create seperate function for golden section search
+				made getjac functions change based on choice input to NRtracking4
+
 
 
 TO DO:
@@ -94,6 +111,7 @@ TO DO:
 4. Pass the exit condition of the correlation step so that it can be improved upon later if need be.
 5. Bracketing function for golden search to ensure search interval is convex
 6. Machine learning/deep learning to adjust parameters of stopping criteria in NRtracking3_temp
+7. Need to do LK_symbolic so that it is more robust for different warp functions
 
 ripple
 ethos
